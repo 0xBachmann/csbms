@@ -1,8 +1,8 @@
-.cnf
-.gz
-.omd
-.out
-.err
-.trc
-.tre
-.pdb
+*.cnf
+*.gz
+*.omd
+*.out
+*.err
+*.trc
+*.tre
+*.pdb
