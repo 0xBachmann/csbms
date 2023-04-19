@@ -1,0 +1,44 @@
+@prop           totene totpot 
+@topo           ../../../topo/ppn_512.top
+@library        ../../../../utils/ene_ana.md++.lib
+@en_files
+../../../nvt-310/ppn_nvt_310_21.tre.gz
+../../../nvt-310/ppn_nvt_310_22.tre.gz
+../../../nvt-310/ppn_nvt_310_23.tre.gz
+../../../nvt-310/ppn_nvt_310_24.tre.gz
+../../../nvt-310/ppn_nvt_310_25.tre.gz
+../../../nvt-310/ppn_nvt_310_26.tre.gz
+../../../nvt-310/ppn_nvt_310_27.tre.gz
+../../../nvt-310/ppn_nvt_310_28.tre.gz
+../../../nvt-310/ppn_nvt_310_29.tre.gz
+../../../nvt-310/ppn_nvt_310_30.tre.gz
+../../../nvt-310/ppn_nvt_310_31.tre.gz
+../../../nvt-310/ppn_nvt_310_32.tre.gz
+../../../nvt-310/ppn_nvt_310_33.tre.gz
+../../../nvt-310/ppn_nvt_310_34.tre.gz
+../../../nvt-310/ppn_nvt_310_35.tre.gz
+../../../nvt-310/ppn_nvt_310_36.tre.gz
+../../../nvt-310/ppn_nvt_310_37.tre.gz
+../../../nvt-310/ppn_nvt_310_38.tre.gz
+../../../nvt-310/ppn_nvt_310_39.tre.gz
+../../../nvt-310/ppn_nvt_310_40.tre.gz
+../../../nvt-310/ppn_nvt_310_41.tre.gz
+../../../nvt-310/ppn_nvt_310_42.tre.gz
+../../../nvt-310/ppn_nvt_310_43.tre.gz
+../../../nvt-310/ppn_nvt_310_44.tre.gz
+../../../nvt-310/ppn_nvt_310_45.tre.gz
+../../../nvt-310/ppn_nvt_310_46.tre.gz
+../../../nvt-310/ppn_nvt_310_47.tre.gz
+../../../nvt-310/ppn_nvt_310_48.tre.gz
+../../../nvt-310/ppn_nvt_310_49.tre.gz
+../../../nvt-310/ppn_nvt_310_50.tre.gz
+../../../nvt-310/ppn_nvt_310_51.tre.gz
+../../../nvt-310/ppn_nvt_310_52.tre.gz
+../../../nvt-310/ppn_nvt_310_53.tre.gz
+../../../nvt-310/ppn_nvt_310_54.tre.gz
+../../../nvt-310/ppn_nvt_310_55.tre.gz
+../../../nvt-310/ppn_nvt_310_56.tre.gz
+../../../nvt-310/ppn_nvt_310_57.tre.gz
+../../../nvt-310/ppn_nvt_310_58.tre.gz
+../../../nvt-310/ppn_nvt_310_59.tre.gz
+../../../nvt-310/ppn_nvt_310_60.tre.gz

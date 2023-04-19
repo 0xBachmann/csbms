@@ -1,0 +1,69 @@
+#!/bin/sh
+
+# first we set some variables
+NAME=`whoami`
+PROGRAM=/cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+SIMULDIR=${HOME}/ex1/GAS
+
+# create temporary directory
+WORKDIR=${TMPDIR}/${SIMULDIR}_gas_2
+mkdir -p ${WORKDIR}
+cd       ${WORKDIR}
+
+# set the input files
+TOPO=${SIMULDIR}/../topo/EGM_512.top
+IUNIT=${SIMULDIR}/gas_2.imd
+INPUTCRD=${SIMULDIR}/gas_1.cnf
+
+#set the output files
+OUNIT=gas_2.omd
+OUTPUTCRD=gas_2.cnf
+OUTPUTTRX=gas_2.trc
+OUTPUTTRE=gas_2.tre
+
+
+MDOK=1
+
+mpirun ${PROGRAM} \
+	@topo        ${TOPO} \
+	@conf        ${INPUTCRD} \
+	@input       ${IUNIT} \
+	@fin         ${OUTPUTCRD} \
+	@trc         ${OUTPUTTRX} \
+	@tre         ${OUTPUTTRE}\
+	>            ${OUNIT}
+grep "finished successfully" ${OUNIT} > /dev/null || MDOK=0
+
+uname -a >> ${OUNIT}
+
+# compress some files
+gzip ${OUTPUTTRX}
+gzip ${OUTPUTTRE}
+
+# copy the files back
+OK=1
+cp ${OUNIT}               ${SIMULDIR} || OK=0
+cp ${OUTPUTCRD}           ${SIMULDIR} || OK=0
+cp ${OUTPUTTRX}.gz        ${SIMULDIR} || OK=0
+cp ${OUTPUTTRE}.gz        ${SIMULDIR} || OK=0
+
+# clean up after successful run
+if `test ${OK} -eq 0`; then
+  uname -a > mess;
+  echo 'cp failed for gas, run 2' >> mess;
+  Mail -s "ERROR" ${NAME} < mess;
+  cd ${SIMULDIR};
+else
+  cd ${SIMULDIR};
+  rm ${WORKDIR}/*;
+  rmdir ${WORKDIR};
+fi
+
+# stop if MD was not succesfull
+if `test ${MDOK} -eq 0`; then
+  exit
+fi
+
+# perform last command (usually submit next job)
+cd ${SIMULDIR}
+bsub -W 24:00 -R "rusage[scratch=2000]" -J gas_3 -e ${SIMULDIR}/gas_3.err -o ${SIMULDIR}/gas_3.out < gas_3.run

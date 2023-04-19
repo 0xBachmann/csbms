@@ -1,0 +1,35 @@
+MD:         10% done...
+MD: spent 0:4:12
+MD: ETA   0:37:49
+MD:         20% done...
+MD: spent 0:8:20
+MD: ETA   0:33:23
+MD:         30% done...
+MD: spent 0:12:27
+MD: ETA   0:29:3
+MD:         40% done...
+MD: spent 0:16:35
+MD: ETA   0:24:53
+MD:         50% done...
+MD: spent 0:20:42
+MD: ETA   0:20:42
+MD:         60% done...
+MD: spent 0:24:49
+MD: ETA   0:16:33
+MD:         70% done...
+MD: spent 0:28:57
+MD: ETA   0:12:24
+MD:         80% done...
+MD: spent 0:33:6
+MD: ETA   0:8:16
+MD:         90% done...
+MD: spent 0:37:15
+MD: ETA   0:4:8
+MD:        100% done...
+MD: spent 0:41:26
+MD: ETA   0:0:0
+cp: `md_NOE_TAR_92.omd' and `/home/poborsky/newex6/md/NOE_TAR/md_NOE_TAR_92.omd' are the same file
+cp: `md_NOE_TAR_92.cnf' and `/home/poborsky/newex6/md/NOE_TAR/md_NOE_TAR_92.cnf' are the same file
+cp: `md_NOE_TAR_92.trc.gz' and `/home/poborsky/newex6/md/NOE_TAR/md_NOE_TAR_92.trc.gz' are the same file
+cp: `md_NOE_TAR_92.tre.gz' and `/home/poborsky/newex6/md/NOE_TAR/md_NOE_TAR_92.tre.gz' are the same file
+Your job 1078318 ("md_NOE_TAR_93") has been submitted

@@ -1,0 +1,69 @@
+#!/bin/sh
+
+# first we set some variables
+NAME=`whoami`
+PROGRAM=/cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+SIMULDIR=${HOME}/ex1/WAT
+
+# create temporary directory
+WORKDIR=${SIMULDIR}
+mkdir -p ${WORKDIR}
+cd       ${WORKDIR}
+
+# set the input files
+TOPO=${SIMULDIR}/../topo/EGM.top
+IUNIT=${SIMULDIR}/wat_3.imd
+INPUTCRD=${SIMULDIR}/wat_2.cnf
+
+#set the output files
+OUNIT=wat_3.omd
+OUTPUTCRD=wat_3.cnf
+OUTPUTTRX=wat_3.trc
+OUTPUTTRE=wat_3.tre
+
+
+MDOK=1
+
+mpirun ${PROGRAM} \
+	@topo        ${TOPO} \
+	@conf        ${INPUTCRD} \
+	@input       ${IUNIT} \
+	@fin         ${OUTPUTCRD} \
+	@trc         ${OUTPUTTRX} \
+	@tre         ${OUTPUTTRE}\
+	>            ${OUNIT}
+grep "finished successfully" ${OUNIT} > /dev/null || MDOK=0
+
+uname -a >> ${OUNIT}
+
+# compress some files
+gzip ${OUTPUTTRX}
+gzip ${OUTPUTTRE}
+
+# copy the files back
+OK=1
+cp ${OUNIT}               ${SIMULDIR} || OK=0
+cp ${OUTPUTCRD}           ${SIMULDIR} || OK=0
+cp ${OUTPUTTRX}.gz        ${SIMULDIR} || OK=0
+cp ${OUTPUTTRE}.gz        ${SIMULDIR} || OK=0
+
+# clean up after successful run
+if `test ${OK} -eq 0`; then
+  uname -a > mess;
+  echo 'cp failed for wat, run 3' >> mess;
+  Mail -s "ERROR" ${NAME} < mess;
+  cd ${SIMULDIR};
+else
+  cd ${SIMULDIR};
+  rm ${WORKDIR}/*;
+  rmdir ${WORKDIR};
+fi
+
+# stop if MD was not succesfull
+if `test ${MDOK} -eq 0`; then
+  exit
+fi
+
+# perform last command (usually submit next job)
+cd ${SIMULDIR}
+

@@ -1,0 +1,35 @@
+Sender: LSF System <lsfadmin@eu-c7-101-13>
+Subject: Job 237415551: <min> in cluster <euler> Done
+
+Job <min> was submitted from host <eu-login-12> by user <jbachmann> in cluster <euler> at Tue Nov  8 08:06:57 2022
+Job was executed on host(s) <eu-c7-101-13>, in queue <normal.4h>, as user <jbachmann> in cluster <euler> at Tue Nov  8 08:07:15 2022
+</cluster/home/jbachmann> was used as the home directory.
+</cluster/home/jbachmann/ex4/ppn/min> was used as the working directory.
+Started at Tue Nov  8 08:07:15 2022
+Terminated at Tue Nov  8 08:07:38 2022
+Results reported at Tue Nov  8 08:07:38 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./min.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   20.48 sec.
+    Max Memory :                                 61 MB
+    Average Memory :                             61.00 MB
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               963.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   25 sec.
+    Turnaround time :                            41 sec.
+
+The output (if any) follows:
+

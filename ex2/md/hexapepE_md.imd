@@ -1,0 +1,93 @@
+TITLE
+steepest descent energy minimization of the peptide in water
+END
+SYSTEM
+#      NPM      NSM 
+         1	1610      
+END
+INITIALISE
+#    NTIVEL   NTISHK   NTINHT    NTINHB    NTISHI  NTIRTC     NTICOM   NTISTI      IG     TEMPI
+     	0        0        0         0         1       0          0        0  210185    340
+END
+STEP
+#   NSTLIM         T        DT
+      500000      0    0.002
+END
+BOUNDCOND
+#      NTB    NDFMIN
+      1       3
+END
+MULTIBATH
+# ALGORITHM
+  0
+# NBATH
+  2
+# TEMPO TAU
+  340    0.1   
+  340    0.1
+# DOFSET
+  2
+# LAST COMBATH IRBATH
+  64    1       1    
+  4894    2       2
+END
+PRESSURESCALE
+# COUPLE SCALE  COMP    TAUP    VIRIAL
+  2	1   0.0004575 0.5   2
+# SEMI
+1       1       1
+# PRESO
+0.06102 0       0
+0       0.06102 0
+0       0       0.06102
+END
+COMTRANSROT
+# NSCM
+  1000 
+END
+PRINTOUT
+#     NTPR          NTPP
+      1000           0
+END
+WRITETRAJ
+# NTWX  NTWSE   NTWV    NTWF    NTWE    NTWG    NTWB
+ 500   0       0       0    0     0       0
+END
+# use the shake algorithm to constrain the bond lengths.
+CONSTRAINT
+#      NTC       NTCP   NTCP0(1)     NTCS      NTCS0(1)
+     	3    	1  	 0.00010    	1      0.00010 
+END
+FORCE
+# NTF array
+# bonds             angles    imp.     dihe     charge nonbonded
+  	0            1         1        1         1     1  
+# NEGR    NRE(1)    NRE(2)    ...      NRE(NEGR)
+       	3	63	64	4894
+END
+COVALENTFORM
+# NTBBH NTBAH   NTBDN
+ 0      0       0
+END
+PAIRLIST
+#	algorithm: standard (0) (gromos96 like pairlist)
+#		             grid (1) (XX grid pairlist)
+#	SIZE:	   grid cell size (or auto = 0.5 * RCUTP)
+#	TYPE:	   chargegoup (0) (chargegroup based cutoff)
+#			         atomic (1) (atom based cutoff)
+#
+#	algorithm	NSNB	RCUTP	RCUTL	SIZE	TYPE
+	0            	5	0.8	1.4	0.4 	0
+END
+NONBONDED
+# NLRELE    APPAK      RCRF     EPSRF   NSLFEXCL
+  1	      0.0    	1.4	32.3          1
+# NSHAPE   ASHAPE    NA2CLC   TOLA2   EPSLS
+      -1       1.4        2   1e-10       0
+# NKX    NKY   NKZ    KCUT
+   10     10    10     100
+# NGX   NGY   NGZ  NASORD  NFDORD   NALIAS  NSPORD
+   32    32    32       3       2        3       4
+# NQEVAL   FACCUR   NRDGRD   NWRGRD   NLRLJ    SLVDNS
+  100000      1.6        0        0       0      33.3
+END

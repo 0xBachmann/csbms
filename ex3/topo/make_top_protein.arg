@@ -1,0 +1,10 @@
+# make_top
+        @build ./54a7.mtb # <molecular topology building block file>
+        @param ./54a7.ifp #<interaction function parameter file>
+        @seq   NH3+ THR THR TYR LYSH LEU ILE LEU ASN LEU LYSH GLN ALA LYSH
+GLU GLU ALA ILE LYSH GLU LEU VAL ASP ALA ALA THR ALA
+GLU LYSH TYR PHE LYSH LEU TYR ALA ASN ALA LYSH THR VAL
+GLU GLY VAL TRP THR TYR LYSH ASP GLU THR LYSH THR PHE
+THR VAL THR GLU COO-
+
+        @solv  H2O #<building block for the solvent>

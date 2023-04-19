@@ -1,0 +1,67 @@
+#!/bin/sh
+
+# first we set some variables
+NAME=`whoami`
+PROGRAM=/cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+SIMULDIR=/cluster/home/jbachmann/ex3/md
+
+# create temporary directory
+WORKDIR=${TMPDIR}/${SIMULDIR}/running
+mkdir -p ${WORKDIR}
+cd       ${WORKDIR}
+
+# set the input files
+TOPO=${SIMULDIR}/../topo/protein.top
+IUNIT=${SIMULDIR}/protein_298K_2.imd
+INPUTCRD=${SIMULDIR}/protein_298K_1.cnf
+
+#set the output files
+OUNIT=protein_298K_2.omd
+OUTPUTCRD=protein_298K_2.cnf
+OUTPUTTRX=protein_298K_2.trc
+OUTPUTTRE=protein_298K_2.tre
+
+
+MDOK=1
+
+${PROGRAM} \
+	@topo        ${TOPO} \
+	@conf        ${INPUTCRD} \
+	@input       ${IUNIT} \
+	@fin         ${OUTPUTCRD} \
+	@trc         ${OUTPUTTRX} \
+	@tre         ${OUTPUTTRE}\
+	>            ${OUNIT}
+grep "finished successfully" ${OUNIT} > /dev/null || MDOK=0
+
+uname -a >> ${OUNIT}
+
+# compress some files
+gzip ${OUTPUTTRX}
+gzip ${OUTPUTTRE}
+
+# copy the files back
+OK=1
+cp ${OUNIT}               ${SIMULDIR} || OK=0
+cp ${OUTPUTCRD}           ${SIMULDIR} || OK=0
+cp ${OUTPUTTRX}.gz        ${SIMULDIR} || OK=0
+cp ${OUTPUTTRE}.gz        ${SIMULDIR} || OK=0
+
+# clean up after successful run
+if `test ${OK} -eq 0`; then
+  uname -a > mess;
+  echo 'cp failed for protein_298K, run 2' >> mess;
+  Mail -s "ERROR" ${NAME} < mess;
+  cd ${SIMULDIR};
+else
+  cd ${SIMULDIR};
+  rm ${WORKDIR}/*;
+  rmdir ${WORKDIR};
+fi
+
+# stop if MD was not succesfull
+if `test ${MDOK} -eq 0`; then
+  exit
+fi
+
+# perform last command (usually submit next job)

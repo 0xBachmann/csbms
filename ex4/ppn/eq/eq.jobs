@@ -1,0 +1,12 @@
+TITLE
+General startup protocol.
+heating while loosening the position restraints.
+END
+JOBSCRIPTS
+job_id NTIVEL TEMPI TEMP0[1]    subdir run_after
+1      1      60.0      60.0    .      0
+2      0      0.0      120.0    .      1
+3      0      0.0      180.0    .      2
+4      0      0.0      240.0    .      3
+5      0      0.0      300.0    .      4
+END

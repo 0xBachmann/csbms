@@ -1,0 +1,13 @@
+# mk_script
+        @sys           protein
+        @bin           /cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+        @dir           ${PWD} 
+        @version       md++
+        @joblist       equilibration.jobs #<joblist file>]
+        @files
+                topo         ../topo/protein.top
+                input        eq.imd
+                coord        protein_box_min.cnf 
+                refpos       protein_box_min.rpr 
+                posresspec   protein_box_min.por
+        @template      /cluster/work/igc/CSBMS/GROMOS/lib/mk_script.1.procs.lib

@@ -1,0 +1,12 @@
+
+@sys     phe_to_tol
+@joblist ./joblist_TI.dat
+@bin     /usr/local/gromos-0915/bin/md_mpi
+@dir     ${PWD}
+@files 
+        topo        ../topo/phe.top
+        input       ./TI.inp
+        coord       ../coord/phe.cnf
+        pttopo      phe_to_tol.ptp
+@template   ../lib/mk_script.4.procs.lib
+@version md++

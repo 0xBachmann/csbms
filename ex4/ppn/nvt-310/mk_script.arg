@@ -1,0 +1,10 @@
+@sys	    	nvt
+@bin        	/cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+@dir        	$PWD
+@files
+  topo		../topo/ppn_512.top
+  input		nvt.imd
+  coord		../npt/npt_60.cnf
+@template	../../utils/mk_script.4.procs.lib
+@version    	md++
+@script		11 50

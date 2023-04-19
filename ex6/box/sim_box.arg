@@ -1,0 +1,8 @@
+
+@topo ../topo/peptide.top
+@pbc r
+@pos ../min/peptide_min.cnf
+@solvent spc.cnf
+@minwall 1.0
+@thresh 0.23
+@rotate

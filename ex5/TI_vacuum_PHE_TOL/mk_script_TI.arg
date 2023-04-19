@@ -1,0 +1,11 @@
+@sys     phe_to_tol
+@joblist ./joblist_TI.dat
+@bin     /cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+@dir     ${PWD}
+@files 
+        topo        ../topo/phe.top
+        input       ./TI.inp
+        coord       ../coord/phe_vacuum.cnf
+        pttopo      phe_to_tol.ptp
+@template   /cluster/work/igc/CSBMS/GROMOS/lib/mk_script.lib
+@version md++

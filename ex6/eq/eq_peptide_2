@@ -1,0 +1,35 @@
+MD:         10% done...
+MD: spent 0:0:51
+MD: ETA   0:7:44
+MD:         20% done...
+MD: spent 0:1:40
+MD: ETA   0:6:40
+MD:         30% done...
+MD: spent 0:2:28
+MD: ETA   0:5:47
+MD:         40% done...
+MD: spent 0:3:17
+MD: ETA   0:4:56
+MD:         50% done...
+MD: spent 0:4:10
+MD: ETA   0:4:10
+MD:         60% done...
+MD: spent 0:5:4
+MD: ETA   0:3:23
+MD:         70% done...
+MD: spent 0:6:0
+MD: ETA   0:2:34
+MD:         80% done...
+MD: spent 0:6:58
+MD: ETA   0:1:44
+MD:         90% done...
+MD: spent 0:7:54
+MD: ETA   0:0:52
+MD:        100% done...
+MD: spent 0:8:50
+MD: ETA   0:0:0
+cp: `eq_peptide_2.omd' and `/home/weihuang/ex6/eq/eq_peptide_2.omd' are the same file
+cp: `eq_peptide_2.cnf' and `/home/weihuang/ex6/eq/eq_peptide_2.cnf' are the same file
+cp: `eq_peptide_2.trc.gz' and `/home/weihuang/ex6/eq/eq_peptide_2.trc.gz' are the same file
+cp: `eq_peptide_2.tre.gz' and `/home/weihuang/ex6/eq/eq_peptide_2.tre.gz' are the same file
+Your job 246213 ("eq_peptide_3") has been submitted

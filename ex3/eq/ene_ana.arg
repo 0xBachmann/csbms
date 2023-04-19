@@ -1,0 +1,6 @@
+# Usage:
+#
+# ene_ana
+    @prop        pressu solutemp2 totene totpot totkin
+    @library     ene_ana.md++.lib
+    @en_files    protein_1.tre.gz protein_2.tre.gz protein_3.tre.gz protein_4.tre.gz protein_5.tre.gz protein_6.tre.gz protein_7.tre.gz

@@ -1,0 +1,7 @@
+@topo ../topo/hexapepA.top
+@pbc r
+@pos ../coord/hexapep_vac.cnf
+@solvent ../coord/ch3oh.cnf
+@minwall 1.5
+@thresh 0.23
+@rotate 

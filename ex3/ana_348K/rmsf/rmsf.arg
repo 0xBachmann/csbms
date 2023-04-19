@@ -1,0 +1,27 @@
+# Usage:
+#
+# rmsf
+    @topo       ../../topo/protein.top 
+    @pbc        r
+    @atomsrmsf  1:CA
+    @ref        ../../eq/protein_1.cnf 
+    @traj       ../../md_348K_10ns/protein_348K_1.trc.gz
+                ../../md_348K_10ns/protein_348K_2.trc.gz
+                ../../md_348K_10ns/protein_348K_3.trc.gz
+                ../../md_348K_10ns/protein_348K_4.trc.gz
+                ../../md_348K_10ns/protein_348K_5.trc.gz
+                ../../md_348K_10ns/protein_348K_6.trc.gz
+                ../../md_348K_10ns/protein_348K_7.trc.gz
+                ../../md_348K_10ns/protein_348K_8.trc.gz
+                ../../md_348K_10ns/protein_348K_9.trc.gz
+                ../../md_348K_10ns/protein_348K_10.trc.gz
+                ../../md_348K_10ns/protein_348K_11.trc.gz
+                ../../md_348K_10ns/protein_348K_12.trc.gz
+                ../../md_348K_10ns/protein_348K_13.trc.gz
+                ../../md_348K_10ns/protein_348K_14.trc.gz
+                ../../md_348K_10ns/protein_348K_15.trc.gz
+                ../../md_348K_10ns/protein_348K_16.trc.gz
+                ../../md_348K_10ns/protein_348K_17.trc.gz
+                ../../md_348K_10ns/protein_348K_18.trc.gz
+                ../../md_348K_10ns/protein_348K_19.trc.gz
+                ../../md_348K_10ns/protein_348K_20.trc.gz

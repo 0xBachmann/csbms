@@ -1,0 +1,71 @@
+#!/bin/sh
+
+# first we set some variables
+NAME=`whoami`
+PROGRAM=/cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+SIMULDIR=/cluster/home/jbachmann/ex6/md/NOE_IR
+
+# create temporary directory
+WORKDIR=${TMPDIR}/${SIMULDIR}/running
+mkdir -p ${WORKDIR}
+cd       ${WORKDIR}
+
+# set the input files
+TOPO=${SIMULDIR}/../../topo/peptide.top
+IUNIT=${SIMULDIR}/md_NOE_IR_2.imd
+INPUTCRD=${SIMULDIR}/md_NOE_IR_1.cnf
+DISRES=${SIMULDIR}/../../prep_noe/noe.dsr
+
+#set the output files
+OUNIT=md_NOE_IR_2.omd
+OUTPUTCRD=md_NOE_IR_2.cnf
+OUTPUTTRX=md_NOE_IR_2.trc
+OUTPUTTRE=md_NOE_IR_2.tre
+
+
+MDOK=1
+
+${PROGRAM} \
+	@topo        ${TOPO} \
+	@conf        ${INPUTCRD} \
+	@input       ${IUNIT} \
+	@distrest    ${DISRES} \
+	@fin         ${OUTPUTCRD} \
+	@trc         ${OUTPUTTRX} \
+	@tre         ${OUTPUTTRE}\
+	>            ${OUNIT}
+grep "finished successfully" ${OUNIT} > /dev/null || MDOK=0
+
+uname -a >> ${OUNIT}
+
+# compress some files
+gzip ${OUTPUTTRX}
+gzip ${OUTPUTTRE}
+
+# copy the files back
+OK=1
+cp ${OUNIT}               ${SIMULDIR} || OK=0
+cp ${OUTPUTCRD}           ${SIMULDIR} || OK=0
+cp ${OUTPUTTRX}.gz        ${SIMULDIR} || OK=0
+cp ${OUTPUTTRE}.gz        ${SIMULDIR} || OK=0
+
+# clean up after successful run
+if `test ${OK} -eq 0`; then
+  uname -a > mess;
+  echo 'cp failed for md_NOE_IR, run 2' >> mess;
+  Mail -s "ERROR" ${NAME} < mess;
+  cd ${SIMULDIR};
+else
+  cd ${SIMULDIR};
+  rm ${WORKDIR}/*;
+  rmdir ${WORKDIR};
+fi
+
+# stop if MD was not succesfull
+if `test ${MDOK} -eq 0`; then
+  exit
+fi
+
+# perform last command (usually submit next job)
+cd ${SIMULDIR}
+bsub -W 4:00 -R "rusage[scratch=2000]" -n 4 -J md_NOE_IR_3 -e ${SIMULDIR}/md_NOE_IR_3.err -o ${SIMULDIR}/md_NOE_IR_3.out < md_NOE_IR_3.run 

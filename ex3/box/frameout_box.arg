@@ -1,0 +1,10 @@
+# Usage: 
+#
+# frameout
+	@topo       ../topo/protein.top 
+	@pbc        r  
+	@outformat  pdb 
+	@include   ALL
+        @time      0 1
+        @single    single 
+	@traj      protein_box.cnf

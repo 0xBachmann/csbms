@@ -1,0 +1,7 @@
+# sim_box
+        @topo      ../topo/protein.top      #<molecular topology file>
+        @pbc       r                        #<periodic boundary conditions (r or t)>
+        @pos       ../min/protein_min.cnf  #<input coordinate file for the solute>
+        @solvent   h2o.cnf                  #<input coordinate file for the solvent>
+        @minwall   0.9                      #<minimum solute to wall distance>]
+        @thresh    0.23                     #<minimum solvent-solute distance (default 0.23 nm)>]

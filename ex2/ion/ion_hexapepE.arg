@@ -1,0 +1,7 @@
+@topo ../topo/hexapepA.top
+@pbc r
+@negative 1 CL
+@positive 0
+@potential 0.8
+@mindist 0.35
+@pos ../box/hexapepE_met.cnf

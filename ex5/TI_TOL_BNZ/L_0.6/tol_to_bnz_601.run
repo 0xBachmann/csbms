@@ -1,0 +1,75 @@
+#!/bin/sh
+
+# first we set some variables
+NAME=`whoami`
+PROGRAM=/cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+SIMULDIR=/cluster/work/igc/CSBMS_helper/ex5/TI_TOL_BNZ
+
+# create temporary directory
+WORKDIR=${SIMULDIR}/running
+mkdir -p ${WORKDIR}
+cd       ${WORKDIR}
+
+# set the input files
+TOPO=${SIMULDIR}/../topo/tol.top
+IUNIT=${SIMULDIR}/L_0.6/tol_to_bnz_601.imd
+INPUTCRD=${SIMULDIR}/L_0.5/tol_to_bnz_502.cnf
+PTTOPO=${SIMULDIR}/tol_to_bnz.ptp
+
+#set the output files
+OUNIT=tol_to_bnz_601.omd
+OUTPUTCRD=tol_to_bnz_601.cnf
+OUTPUTTRX=tol_to_bnz_601.trc
+OUTPUTTRE=tol_to_bnz_601.tre
+OUTPUTTRG=tol_to_bnz_601.trg
+
+
+MDOK=1
+
+${PROGRAM} \
+	@topo        ${TOPO} \
+	@conf        ${INPUTCRD} \
+	@input       ${IUNIT} \
+	@pttopo      ${PTTOPO} \
+	@fin         ${OUTPUTCRD} \
+	@trc         ${OUTPUTTRX} \
+	@tre         ${OUTPUTTRE} \
+	@trg         ${OUTPUTTRG}\
+	>            ${OUNIT}
+grep "finished successfully" ${OUNIT} > /dev/null || MDOK=0
+
+uname -a >> ${OUNIT}
+
+# compress some files
+gzip ${OUTPUTTRX}
+gzip ${OUTPUTTRE}
+gzip ${OUTPUTTRG}
+
+# copy the files back
+OK=1
+cp ${OUNIT}               ${SIMULDIR}/L_0.6 || OK=0
+cp ${OUTPUTCRD}           ${SIMULDIR}/L_0.6 || OK=0
+cp ${OUTPUTTRX}.gz        ${SIMULDIR}/L_0.6 || OK=0
+cp ${OUTPUTTRE}.gz        ${SIMULDIR}/L_0.6 || OK=0
+cp ${OUTPUTTRG}.gz        ${SIMULDIR}/L_0.6 || OK=0
+
+# clean up after successful run
+if `test ${OK} -eq 0`; then
+  uname -a > mess;
+  echo 'cp failed for tol_to_bnz, run 601' >> mess;
+  Mail -s "ERROR" ${NAME} < mess;
+  cd ${SIMULDIR};
+else
+  cd ${SIMULDIR};
+  rm ${WORKDIR}/*;
+  rmdir ${WORKDIR};
+fi
+
+# stop if MD was not succesfull
+if `test ${MDOK} -eq 0`; then
+  exit
+fi
+
+# perform last command (usually submit next job)
+cd ${SIMULDIR}/L_0.6
+bsub -W 24:00 -R "rusage[scratch=2000]" -n 8 -J tol_to_bnz_602 -e ${SIMULDIR}/tol_to_bnz_602.err -o ${SIMULDIR}/tol_to_bnz_602.out < tol_to_bnz_602.run 

@@ -1,0 +1,35 @@
+MD:         10% done...
+MD: spent 0:4:15
+MD: ETA   0:38:17
+MD:         20% done...
+MD: spent 0:8:28
+MD: ETA   0:33:55
+MD:         30% done...
+MD: spent 0:12:40
+MD: ETA   0:29:35
+MD:         40% done...
+MD: spent 0:16:52
+MD: ETA   0:25:19
+MD:         50% done...
+MD: spent 0:21:4
+MD: ETA   0:21:4
+MD:         60% done...
+MD: spent 0:25:16
+MD: ETA   0:16:51
+MD:         70% done...
+MD: spent 0:29:28
+MD: ETA   0:12:38
+MD:         80% done...
+MD: spent 0:33:40
+MD: ETA   0:8:25
+MD:         90% done...
+MD: spent 0:37:52
+MD: ETA   0:4:12
+MD:        100% done...
+MD: spent 0:42:5
+MD: ETA   0:0:0
+cp: `md_unrestrained_25.omd' and `/home/poborsky/newex6/md/unrestrained/md_unrestrained_25.omd' are the same file
+cp: `md_unrestrained_25.cnf' and `/home/poborsky/newex6/md/unrestrained/md_unrestrained_25.cnf' are the same file
+cp: `md_unrestrained_25.trc.gz' and `/home/poborsky/newex6/md/unrestrained/md_unrestrained_25.trc.gz' are the same file
+cp: `md_unrestrained_25.tre.gz' and `/home/poborsky/newex6/md/unrestrained/md_unrestrained_25.tre.gz' are the same file
+Your job 1078148 ("md_unrestrained_26") has been submitted

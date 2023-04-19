@@ -1,0 +1,5 @@
+# pdb2g96
+        @topo    ../topo/protein.top        #<molecular topology file>
+        @pdb     ../pdb/protein_model1.pdb  #<pdb coordinates>
+        @out     protein_g96.cnf            #<resulting GROMOS coordinates> (optional, defaults to stdout)]
+        @lib     pdb2g96.lib                #<library for atom and residue names>

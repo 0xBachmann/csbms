@@ -1,0 +1,45 @@
+@topo           ../../topo/ppn_512.top
+@pbc            r nog
+@e_rf           19.1
+@temp           300
+@traj
+../../npt/ppn_npt_21.trc.gz
+../../npt/ppn_npt_22.trc.gz
+../../npt/ppn_npt_23.trc.gz
+../../npt/ppn_npt_24.trc.gz
+../../npt/ppn_npt_25.trc.gz
+../../npt/ppn_npt_26.trc.gz
+../../npt/ppn_npt_27.trc.gz
+../../npt/ppn_npt_28.trc.gz
+../../npt/ppn_npt_29.trc.gz
+../../npt/ppn_npt_30.trc.gz
+../../npt/ppn_npt_31.trc.gz
+../../npt/ppn_npt_32.trc.gz
+../../npt/ppn_npt_33.trc.gz
+../../npt/ppn_npt_34.trc.gz
+../../npt/ppn_npt_35.trc.gz
+../../npt/ppn_npt_36.trc.gz
+../../npt/ppn_npt_37.trc.gz
+../../npt/ppn_npt_38.trc.gz
+../../npt/ppn_npt_39.trc.gz
+../../npt/ppn_npt_40.trc.gz
+../../npt/ppn_npt_41.trc.gz
+../../npt/ppn_npt_42.trc.gz
+../../npt/ppn_npt_43.trc.gz
+../../npt/ppn_npt_44.trc.gz
+../../npt/ppn_npt_45.trc.gz
+../../npt/ppn_npt_46.trc.gz
+../../npt/ppn_npt_47.trc.gz
+../../npt/ppn_npt_48.trc.gz
+../../npt/ppn_npt_49.trc.gz
+../../npt/ppn_npt_50.trc.gz
+../../npt/ppn_npt_51.trc.gz
+../../npt/ppn_npt_52.trc.gz
+../../npt/ppn_npt_53.trc.gz
+../../npt/ppn_npt_54.trc.gz
+../../npt/ppn_npt_55.trc.gz
+../../npt/ppn_npt_56.trc.gz
+../../npt/ppn_npt_57.trc.gz
+../../npt/ppn_npt_58.trc.gz
+../../npt/ppn_npt_59.trc.gz
+../../npt/ppn_npt_60.trc.gz

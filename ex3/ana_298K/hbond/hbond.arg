@@ -1,0 +1,30 @@
+# Usage: 
+#
+# hbond
+    @topo       ../../topo/protein.top 
+    @pbc            r 
+    @DonorAtomsA    1:a 
+    @DonorAtomsB    1:a 
+    @AcceptorAtomsA 1:a
+    @AcceptorAtomsB 1:a
+    @massfile       mass.file     
+    @traj       ../../md_298K_10ns/protein_298K_1.trc.gz
+                ../../md_298K_10ns/protein_298K_2.trc.gz
+                ../../md_298K_10ns/protein_298K_3.trc.gz
+                ../../md_298K_10ns/protein_298K_4.trc.gz
+                ../../md_298K_10ns/protein_298K_5.trc.gz
+                ../../md_298K_10ns/protein_298K_6.trc.gz
+                ../../md_298K_10ns/protein_298K_7.trc.gz
+                ../../md_298K_10ns/protein_298K_8.trc.gz
+                ../../md_298K_10ns/protein_298K_9.trc.gz
+                ../../md_298K_10ns/protein_298K_10.trc.gz
+                ../../md_298K_10ns/protein_298K_11.trc.gz
+                ../../md_298K_10ns/protein_298K_12.trc.gz
+                ../../md_298K_10ns/protein_298K_13.trc.gz
+                ../../md_298K_10ns/protein_298K_14.trc.gz
+                ../../md_298K_10ns/protein_298K_15.trc.gz
+                ../../md_298K_10ns/protein_298K_16.trc.gz
+                ../../md_298K_10ns/protein_298K_17.trc.gz
+                ../../md_298K_10ns/protein_298K_18.trc.gz
+                ../../md_298K_10ns/protein_298K_19.trc.gz
+                ../../md_298K_10ns/protein_298K_20.trc.gz

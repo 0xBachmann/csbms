@@ -1,0 +1,44 @@
+@prop           totene totpot 
+@topo           ../../../topo/ppn_512.top
+@library        ../../../../utils/ene_ana.md++.lib
+@en_files
+../../../nvt-300/ppn_nvt_300_21.tre.gz
+../../../nvt-300/ppn_nvt_300_22.tre.gz
+../../../nvt-300/ppn_nvt_300_23.tre.gz
+../../../nvt-300/ppn_nvt_300_24.tre.gz
+../../../nvt-300/ppn_nvt_300_25.tre.gz
+../../../nvt-300/ppn_nvt_300_26.tre.gz
+../../../nvt-300/ppn_nvt_300_27.tre.gz
+../../../nvt-300/ppn_nvt_300_28.tre.gz
+../../../nvt-300/ppn_nvt_300_29.tre.gz
+../../../nvt-300/ppn_nvt_300_30.tre.gz
+../../../nvt-300/ppn_nvt_300_31.tre.gz
+../../../nvt-300/ppn_nvt_300_32.tre.gz
+../../../nvt-300/ppn_nvt_300_33.tre.gz
+../../../nvt-300/ppn_nvt_300_34.tre.gz
+../../../nvt-300/ppn_nvt_300_35.tre.gz
+../../../nvt-300/ppn_nvt_300_36.tre.gz
+../../../nvt-300/ppn_nvt_300_37.tre.gz
+../../../nvt-300/ppn_nvt_300_38.tre.gz
+../../../nvt-300/ppn_nvt_300_39.tre.gz
+../../../nvt-300/ppn_nvt_300_40.tre.gz
+../../../nvt-300/ppn_nvt_300_41.tre.gz
+../../../nvt-300/ppn_nvt_300_42.tre.gz
+../../../nvt-300/ppn_nvt_300_43.tre.gz
+../../../nvt-300/ppn_nvt_300_44.tre.gz
+../../../nvt-300/ppn_nvt_300_45.tre.gz
+../../../nvt-300/ppn_nvt_300_46.tre.gz
+../../../nvt-300/ppn_nvt_300_47.tre.gz
+../../../nvt-300/ppn_nvt_300_48.tre.gz
+../../../nvt-300/ppn_nvt_300_49.tre.gz
+../../../nvt-300/ppn_nvt_300_50.tre.gz
+../../../nvt-300/ppn_nvt_300_51.tre.gz
+../../../nvt-300/ppn_nvt_300_52.tre.gz
+../../../nvt-300/ppn_nvt_300_53.tre.gz
+../../../nvt-300/ppn_nvt_300_54.tre.gz
+../../../nvt-300/ppn_nvt_300_55.tre.gz
+../../../nvt-300/ppn_nvt_300_56.tre.gz
+../../../nvt-300/ppn_nvt_300_57.tre.gz
+../../../nvt-300/ppn_nvt_300_58.tre.gz
+../../../nvt-300/ppn_nvt_300_59.tre.gz
+../../../nvt-300/ppn_nvt_300_60.tre.gz

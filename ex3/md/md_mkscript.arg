@@ -1,0 +1,11 @@
+# mk_script
+        @sys           protein_298K 
+        @bin           /cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+        @dir           ${PWD}
+        @version       md++
+        @script        1 2
+        @files
+                topo         ../topo/protein.top
+                input        md.imd
+                coord        ../eq/protein_6.cnf
+        @template      /cluster/work/igc/CSBMS/GROMOS/lib/mk_script.1.procs.lib

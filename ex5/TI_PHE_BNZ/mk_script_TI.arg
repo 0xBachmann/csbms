@@ -1,0 +1,11 @@
+@sys     TO_DO
+@joblist TO_DO
+@bin     /cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+@dir     ${PWD}
+@files 
+        topo        ../topo/phe.top
+        input       TO_DO
+        coord       ../coord/phe.cnf
+        pttopo      TO_DO
+@template   /cluster/work/igc/CSBMS/GROMOS/lib/mk_script.lib
+@version md++

@@ -1,0 +1,219 @@
+TITLE
+2JWU. eq in 54a7, rectangular box 
+END
+# MOLECULAR SYSTEM
+# we have 1 solute (NPM) and 7136 solvent molecules (NSM)
+SYSTEM
+#      NPM      NSM 
+         1     5181 
+END
+# INITIALISATION OF THE RUN
+INITIALISE 
+# NTIVEL: 0 read from startup file(def); 1 generate from Maxwell distr @ temp TEMPI
+# NTISHK: 0 no init shake(def); 1 init SHAKE coord only; 2 init SHAKE vel only; 3 init SHAKE both
+# NTINHT: 0 read Nose-Hoover thermostat from file if applic; 1 initialise variables to zero
+# NTINHB: 0 read NH barostat from file(def); 1 reset to zero
+# NTISHI: 0 read atomic shift vectors for inf period setting from file(def); 1 reset to zero
+# NTIRTC: 0 read pos and orientation for roto-trans restr from file(def); 1 reset based on initial configuration of startup file
+# NTICOM: 0 no initial system com motion removal(def); 1 initial com transl is removed;
+# 2 init com trans removed; com rot set to constr value; 3 init com rot set to constr value
+# NTISTI: 0 read stochastic int and IG from startup file(def); 1 set to zero use IG from INIT
+# IG: random number generator seed
+# TEMPI: initial temperature
+# NTIVEL    NTISHK    NTINHT  NTINHB
+       1         3         0       0
+# NTISHI    NTIRTC    NTICOM
+       1         0         0
+# NTISTI
+       0
+#   IG    TEMPI
+145117      0.0
+END
+STEP
+# NSTLIM: >0 number of steps
+# T: time at beginning of simulation (in ps)
+# DT: timestep
+# 2000 steps, print every 500, just to compare timings.
+# NSTLIM    T    DT
+   10000    0    0.002
+END
+# SPATIAL BOUNDARY CONDITIONS
+BOUNDCOND
+# NTB: -1 trun-oct; 0 vac; 1 rect; 2 triclinic
+# NDFMIN: Ndf subtracted for temperature (6 for vaac, 3 for periodic)
+# NTB    NDFMIN
+    1         3
+END
+# THERMODYNAMIC BOUNDARY CONDITIONS
+MULTIBATH
+# ALGORITHM (NUM): 0 weak-coupling; 1 nose-hoover; 2 nose-hoover-chains
+# NUM: number of chains for nose-hoover-chains [only specify when needed]
+# NBATHS: number of T baths to couple to
+# TEMP0(1...NBATHS): bath ref temperature per bath
+# TAU(1...NBATHS): couplin time per bath 
+# DOFSET: number of distinguishable sets of df
+# LAST(1...DOFSET): last atom for set of df
+# COM-BATH(1...DOFSET): T bath to couple COM motion of this set of df to
+# IR-BATH(1...DOFSET): T bath to couple int. and rot. df of this set to
+# ALGORITHM
+          0
+# NBATHS
+       2
+# TEMP0    TAU
+    0.0  0.100
+    0.0  0.100
+# DOFSET
+       2
+# LAST    COM-BATH    IR-BATH
+   592           1          1 # protein
+ 16135           2          2 # water
+END
+# INTERACTION EVALUATION
+FORCE
+# NTF(1..10): determines which bonds, angles etc to include
+# NEGR: 0 no energy groups; >0 N of energy groups
+# NRE(1..NEGR): last atom in each energy group
+# NTF array
+# bonds    angles    imp.     dihe.    nonbonded
+# H        H         H        H        estatic  vdw
+  0        1         1        1        1        1
+# NEGR    NRE(1)    NRE(2)
+     2      592     16135
+END
+CONSTRAINT
+# NTC: 0 no constr; 1 constr solv only; 2 constr solv + solute Hbonds;
+# 3 constr solv and solute bonds; 4 constr bonds in CONSTRAINT block in topo only
+# NTCP: 1 shake for solute; 2 lincs for solute; 3 flexible shake for solute
+# NTCP0: tolerance for shake
+# NTCS: shake(1): shake for solvent, lincs(2): lincs for solvent, flexshake(3): flexshake for solvent
+# NTCS0: tolerance for shake (for solvent?)
+# NTC
+    3
+# NTCP    NTCP0
+# shake  0.00010
+     1  0.00010
+# NTCS    NTCS0
+     1  0.00010
+END
+# PAIRLIST GENERATION
+PAIRLIST
+# algorithm: standard(1) G96-like pairlist; grid(2): md++ grid pairlist
+# NSNB: freq(steps) for pairlist construction
+# RCUTP: cut-off used in pairlist construction
+# RCUTL: cut-off used for long-range interactions
+# SIZE: auto (0.5*RCUTP) or size or grid cell
+# TYPE: chargegroup(0); atomic(1); (type of cut-off)
+# algorithm    NSNB    RCUTP    RCUTL    SIZE    TYPE
+#   standard       5      0.8      1.4    auto    chargegroup
+     0       5      0.8      1.4    0.4    0
+END
+NONBONDED
+# NLRELE: method to handle estatic int; -4 LSERF/SPME; -3 LSERF/P3M; -2 LSERF/Ewald;
+# -1 reaction-field (LSERF compat); 0 no estatic; 1 reaction-field; 2 Ewald; 3 P3M; 4 SPME
+# APPAK: reaction-field inverse Debye screening length
+# RCRF: reaction-field radius; 0.0 set to infinity; > 0.0 actual value
+# EPSRF: 0; r-f permittivity infinite; >1.0 actual value of r-f permittivity
+# NSHAPE: width of lattice-sum charge-shaping function
+# NA2CLC: controls evaluation of lattice-sum A2 term (1-4)
+# TOLA2: rel tol for numerical A2 evaluation
+# EPSLS: 0 lattice-sum permittivity infinite; otherwise sets value
+# NKX,Y,Z: max absolute Ewald k-vector components
+# KCUT: Ewald k-space cutoff
+# NGX,Y,Z: P3M number of grid points on axes
+# NASORD: 1..5 order of mesh charge-assignment functions
+# NFDORD: 0..5 order of mesh finite-diff operator
+# NALIAS: number of mesh alias vectors
+# NSPORD: order of SPME B-spline function
+# NQEVAL: 0 do not reevaluate accuracy; >0 re-evaluate every N steps
+# FACCUR: rms force error threshold
+# NRDGRD: 0,1 read initial influence function and deriv from file
+# NWRGRD: 0,1 write "
+# NLRLF: 0,1 controls long-range LJ correction
+# SLVDNS: ave solv density for long-range LJ correction 
+# NLRELE
+       1 
+# APPAK    RCRF    EPSRF  NSLFEXCL
+    0.0     1.4     61.0     1
+# NSHAPE    ASHAPE    NA2CLC    TOLA2    EPSLS
+      -1       1.4        0   0.1E-9      0.0
+# NKX    NKY    NKZ    KCUT
+   10     10     10   100.0
+# NGX    NGY    NGZ    NASORD    NFDORD    NALIAS    NSPORD
+   32     32     32         3         2         3         4
+# NQEVAL    FACCUR    NRDGRD    NWRGRD
+  100000       1.6         0         0
+# NLRLJ    SLVDNS
+      0      33.3  
+END
+# CENTRE-OF-MASS MOTION
+COMTRANSROT 
+# NSCM: 0 no com motion removal(def); <0 com transl+rot removed every abs(NSCM) steps;
+# >0 com trans removed every NSCM steps
+# NSCM
+ -1000
+END
+# INPUT-OUTPUT
+PRINTOUT
+# NTPR: 0 no printing of energies(def); 1 print out energies every NTPR steps
+# NTPP: 0 no dihedral angle trans monitering[def]; 1 monitor dihedral angle transitions
+# NTPR    NTPP
+   100       0   
+END
+WRITETRAJ
+# NTWX: 0 no coord trj[def]; >0 solute+solvent coords every NTWX; <0 solute only
+# NTWSE [ignored in md++]
+# NTWV: 0 no vel trj[def]; >0 solute+solvent; <0 solute only
+# NTWF: 0 no force trj[def]; >0 solute+solvent; <0 solute only
+# NTWE: 0 no energy trj[def]; >0 energy
+# NTWG: 0 no free energy trj[def]; >0 every NTWG
+# NTWB: 0 no block-ave energy; >0 written
+# NTWX    NTWSE    NTWV    NTWF    NTWE    NTWG    NTWB 
+   100        0       0       0     100       0       0 
+END 
+#PRESSURESCALE
+#	COUPLE:	off(0), calc(1), scale(2)
+#	SCALE:  off(0), iso(1), aniso(2), full(3)
+#	VIRIAL: none(0), atomic(1), molecular(2)
+#
+#   COUPLE  SCALE   COMP        TAUP    VIRIAL
+#    scale   iso     4.575E-4    0.5     molecular
+#         2     1     4.575E-4    0.5     2
+#   reference pressure
+#    0.06102     0.00000     0.00000
+#    0.00000     0.06102     0.00000
+#    0.00000     0.00000     0.06102
+#END
+POSITIONRES
+#    NTPOR 0..3 controls atom positions re(con)straining.
+#          0: no position re(con)straints.
+#          1: restraining with force constant CPOR
+#          2: restraining with force constant CPOR wieghted by
+#             atomic B-factors
+#          3: constraining
+#   NTPORB 0,1 controls reading of reference positions and
+#              B-factors
+#          0: read reference positions from startup file.
+#          1: read reference positions and B-factors from
+#             special file
+#   NTPORS 0,1 controls scaling of reference positions upon
+#              pressure scaling
+#          0: do not scale reference positions
+#          1: scale reference positions
+#     CPOR >= 0 position restraining force constant
+#
+#   NTPOR  NTPORB  NTPORS    CPOR
+        1       0       0   2.5E4
+END
+COVALENTFORM
+# NTBBH: 0,1 controls bond-stretching potential
+#        0: quartic form (default)
+#        1: harmonic form
+# NTBAH: 0,1 controls bond-angle bending potential
+#        0: cosine-harmonic (default)
+#        1: harmonic
+# NTBDN: 0,1 controls torsional dihedral potential
+#        0: arbitrary phase shifts (default)
+#        1: phase shifts limited to 0 and 180 degrees.
+#   NTBBH    NTBAH    NTBDN
+        0        0        0
+END

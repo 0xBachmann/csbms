@@ -1,0 +1,97 @@
+TITLE
+steepest descent energy minimization of the peptide in water
+END
+ENERGYMIN
+#     NTEM    NCYC    DELE    DX0     DXM   NMIN   FLIM
+     #TO_DO       0  #TO_DO   0.01    0.05   2000    0.0
+END
+SYSTEM
+#      NPM      NSM 
+         1      #TO_DO
+END
+INITIALISE
+#    NTIVEL   NTISHK   NTINHT    NTINHB    NTISHI  NTIRTC     NTICOM   NTISTI      IG     TEMPI
+     #TO_DO        0        0         0         1       0          0        0  210185    #TO_DO
+END
+STEP
+#   NSTLIM         T        DT
+      #TO_DO      #TO_DO     #TO_DO
+END
+BOUNDCOND
+#      NTB    NDFMIN
+      #TO_DO       3
+END
+#MULTIBATH
+## ALGORITHM
+#  #TO_DO
+## NBATH
+#  #TO_DO 
+## TEMPO TAU
+#  #TO_DO    0.1   
+#  #TO_DO    0.1
+## DOFSET
+#  2
+## LAST COMBATH IRBATH
+#  #TO_DO    1       1    
+#  #TO_DO    2       2
+#END
+#PRESSURESCALE
+## COUPLE SCALE  COMP    TAUP    VIRIAL
+#  #TO_DO  #TO_DO   0.0004575 0.5   2
+## SEMI
+#1       1       1
+## PRESO
+#0.06102 0       0
+#0       0.06102 0
+#0       0       0.06102
+#END
+#COMTRANSROT
+## NSCM
+#  #TO_DO
+#END
+PRINTOUT
+#     NTPR          NTPP
+      #TO_DO           0
+END
+WRITETRAJ
+# NTWX  NTWSE   NTWV    NTWF    NTWE    NTWG    NTWB
+ #TO_DO   0       0       0     #TO_DO     0       0
+END
+# use the shake algorithm to constrain the bond lengths.
+CONSTRAINT
+#      NTC       NTCP   NTCP0(1)     NTCS      NTCS0(1)
+     #TO_DO     #TO_DO   0.00010    #TO_DO      0.00010 
+END
+FORCE
+# NTF array
+# bonds             angles    imp.     dihe     charge nonbonded
+  #TO_DO            1         1        1         1     1  
+# NEGR    NRE(1)    NRE(2)    ...      NRE(NEGR)
+  #TO_DO  #TO_DO    #TO_DO             #?TO_DO
+END
+COVALENTFORM
+# NTBBH NTBAH   NTBDN
+ 0      0       0
+END
+PAIRLIST
+#	algorithm: standard (0) (gromos96 like pairlist)
+#		             grid (1) (XX grid pairlist)
+#	SIZE:	   grid cell size (or auto = 0.5 * RCUTP)
+#	TYPE:	   chargegoup (0) (chargegroup based cutoff)
+#			         atomic (1) (atom based cutoff)
+#
+#	algorithm	NSNB	RCUTP	RCUTL	SIZE	TYPE
+	0             #TO_DO   #TO_DO  #TO_DO	0.4     #TO_DO
+END
+NONBONDED
+# NLRELE    APPAK      RCRF     EPSRF   NSLFEXCL
+  #TO_DO      0.0    #TO_DO    #TO_DO          1
+# NSHAPE   ASHAPE    NA2CLC   TOLA2   EPSLS
+      -1       1.4        2   1e-10       0
+# NKX    NKY   NKZ    KCUT
+   10     10    10     100
+# NGX   NGY   NGZ  NASORD  NFDORD   NALIAS  NSPORD
+   32    32    32       3       2        3       4
+# NQEVAL   FACCUR   NRDGRD   NWRGRD   NLRLJ    SLVDNS
+  100000      1.6        0        0       0      33.3
+END

@@ -1,0 +1,44 @@
+@prop           totene totpot densit boxvol
+@topo           ../../../topo/ppn_512.top
+@library        ../../../../utils/ene_ana.md++.lib
+@en_files
+../../../npt/ppn_npt_21.tre.gz
+../../../npt/ppn_npt_22.tre.gz
+../../../npt/ppn_npt_23.tre.gz
+../../../npt/ppn_npt_24.tre.gz
+../../../npt/ppn_npt_25.tre.gz
+../../../npt/ppn_npt_26.tre.gz
+../../../npt/ppn_npt_27.tre.gz
+../../../npt/ppn_npt_28.tre.gz
+../../../npt/ppn_npt_29.tre.gz
+../../../npt/ppn_npt_30.tre.gz
+../../../npt/ppn_npt_31.tre.gz
+../../../npt/ppn_npt_32.tre.gz
+../../../npt/ppn_npt_33.tre.gz
+../../../npt/ppn_npt_34.tre.gz
+../../../npt/ppn_npt_35.tre.gz
+../../../npt/ppn_npt_36.tre.gz
+../../../npt/ppn_npt_37.tre.gz
+../../../npt/ppn_npt_38.tre.gz
+../../../npt/ppn_npt_39.tre.gz
+../../../npt/ppn_npt_40.tre.gz
+../../../npt/ppn_npt_41.tre.gz
+../../../npt/ppn_npt_42.tre.gz
+../../../npt/ppn_npt_43.tre.gz
+../../../npt/ppn_npt_44.tre.gz
+../../../npt/ppn_npt_45.tre.gz
+../../../npt/ppn_npt_46.tre.gz
+../../../npt/ppn_npt_47.tre.gz
+../../../npt/ppn_npt_48.tre.gz
+../../../npt/ppn_npt_49.tre.gz
+../../../npt/ppn_npt_50.tre.gz
+../../../npt/ppn_npt_51.tre.gz
+../../../npt/ppn_npt_52.tre.gz
+../../../npt/ppn_npt_53.tre.gz
+../../../npt/ppn_npt_54.tre.gz
+../../../npt/ppn_npt_55.tre.gz
+../../../npt/ppn_npt_56.tre.gz
+../../../npt/ppn_npt_57.tre.gz
+../../../npt/ppn_npt_58.tre.gz
+../../../npt/ppn_npt_59.tre.gz
+../../../npt/ppn_npt_60.tre.gz

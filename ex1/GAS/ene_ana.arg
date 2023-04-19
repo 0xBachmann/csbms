@@ -1,0 +1,5 @@
+@topo ../topo/EGM_512.top
+@library /cluster/work/igc/CSBMS/GROMOS/lib/ene_ana.md++.lib
+@prop totpot
+@time 0 2
+@en_files gas_2.tre.gz gas_3.tre.gz

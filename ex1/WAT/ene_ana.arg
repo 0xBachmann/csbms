@@ -1,0 +1,5 @@
+@topo ../topo/EGM.top
+@library /cluster/work/igc/CSBMS/GROMOS/lib/ene_ana.md++.lib
+@prop totpot nonbsolusolv
+@time 0 2
+@en_files wat_2.tre.gz wat_3.tre.gz

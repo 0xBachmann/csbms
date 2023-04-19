@@ -1,0 +1,11 @@
+@sys     tol_to_bnz
+@joblist ./joblist_TI.dat
+@bin     /usr/local/gromos-1.3.2/bin/md_mpi
+@dir     ${PWD}
+@files 
+        topo        ../topo/tol.top
+        input       ./TI.inp
+        coord       ../coord/tol.cnf
+        pttopo      tol_to_bnz.ptp
+@template   ../lib/mk_script.4.procs.lib
+@version md++

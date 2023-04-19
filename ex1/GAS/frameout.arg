@@ -1,0 +1,8 @@
+@topo ../topo/EGM_512.top
+@pbc r gbond
+@spec ALL
+@outformat pdb
+@include ALL
+@time 0 2
+@single
+@traj gas_2.trc.gz gas_3.trc.gz

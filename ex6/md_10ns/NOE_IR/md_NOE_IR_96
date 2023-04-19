@@ -1,0 +1,35 @@
+MD:         10% done...
+MD: spent 0:4:9
+MD: ETA   0:37:25
+MD:         20% done...
+MD: spent 0:8:14
+MD: ETA   0:32:58
+MD:         30% done...
+MD: spent 0:12:21
+MD: ETA   0:28:49
+MD:         40% done...
+MD: spent 0:16:28
+MD: ETA   0:24:42
+MD:         50% done...
+MD: spent 0:20:39
+MD: ETA   0:20:39
+MD:         60% done...
+MD: spent 0:24:50
+MD: ETA   0:16:33
+MD:         70% done...
+MD: spent 0:29:0
+MD: ETA   0:12:26
+MD:         80% done...
+MD: spent 0:33:9
+MD: ETA   0:8:17
+MD:         90% done...
+MD: spent 0:37:19
+MD: ETA   0:4:8
+MD:        100% done...
+MD: spent 0:41:25
+MD: ETA   0:0:0
+cp: `md_NOE_IR_96.omd' and `/home/poborsky/newex6/md/NOE_IR/md_NOE_IR_96.omd' are the same file
+cp: `md_NOE_IR_96.cnf' and `/home/poborsky/newex6/md/NOE_IR/md_NOE_IR_96.cnf' are the same file
+cp: `md_NOE_IR_96.trc.gz' and `/home/poborsky/newex6/md/NOE_IR/md_NOE_IR_96.trc.gz' are the same file
+cp: `md_NOE_IR_96.tre.gz' and `/home/poborsky/newex6/md/NOE_IR/md_NOE_IR_96.tre.gz' are the same file
+Your job 1078743 ("md_NOE_IR_97") has been submitted

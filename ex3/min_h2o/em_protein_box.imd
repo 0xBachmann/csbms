@@ -1,0 +1,233 @@
+TITLE
+steepest descent energy minimization of 2JWU in h2o
+END
+SYSTEM
+# NPM : protein molecules (0, 1)
+# NSM : solvent molecules (>= 0)
+#      NPM      NSM 
+         1      5181
+END
+INITIALISE
+# NTIVEL: 0,1 controls generation of initial velocities.
+#         0: read from configuration (default)
+#         1: generate from Maxell distribution at temperature TEMPI
+# NTISHK: 0..3 controls shaking of initial configuration
+#         0: no intial SHAKE (default)
+#         1: initial SHAKE on coordinates only
+#         2: initial SHAKE on velocities only
+#         3: initial SHAKE on coordinates and velocities
+# NTINHT: 0,1 controls generation of initial Nose-Hoover chain variables
+#         0: read from configuration (default)
+#         1: reset variables to zero.
+# NTINHB: 0,1 controls generation of initial Nose-Hoover (chain) barostat
+#             variables
+#         0: read from strartup file (if applicable) (default)
+#         1: reset variables to zero
+# NTISHI: 0,1 controls initial setting for lattice shift vectors
+#         0: read from configuration (default)
+#         1: reset shifts to zero.
+# NTIRTC: 0,1 controls initial setting of positions and orientations for
+#             roto-translational constraints
+#         0: read from configuration (default)
+#         1: reset based on initial configuraion of startup file
+# NTICOM: 0,1 controls initial removal of COM motion
+#         0: no initial system COM motion removal (default)
+#         1: initial COM translation is removed
+#         2: initial COM rotation is removed
+# NTISTI: 0,1 controls generation of stochastic integrals
+#         0: read stochastic integrals and IG from configuration (default)
+#         1: set stochastic integrals to zero and use IG from here.
+# IG:     random number generator seed
+# TEMPI:  initial temperature
+#
+#  NTIVEL  NTISHK  NTINHT  NTINHB
+        1       3       0       0
+#  NTISHI  NTIRTC  NTICOM
+        1       1       0
+#  NTISTI
+        0
+#      IG   TEMPI
+   210185     0.0
+END
+STEP
+#   NSTLIM  number of steps
+#   T       initial time
+#   DT      time step
+#
+#   NSTLIM         T        DT
+      2000       0.0     0.002
+END
+ENERGYMIN
+# NTEM: 0..2 controls energy minimisation mode
+#       0: do not do energy minimisation (default)
+#       1: steepest-descent minimisation
+#       2: conjugate-gradient minimisation (promd only)
+# NCYC: >0 number of steps before resetting of conjugate-gradient search direction
+# DELE: >0.0 energy threshold for convergence
+# DX0: > 0.0 initial step size
+# DXM: > 0.0 maximum step size
+# NMIN > 0 minimum number of minimisation steps
+# FLIM >= 0.0 limit force to maximum value (FLIM > 0.0 is not recommended).
+#     NTEM    NCYC    DELE    DX0     DXM    NMIN    FLIM
+         1      20     0.1   0.01    0.05       1       0
+END
+BOUNDCOND
+#  NTB: boundary conditions
+#       -1 : truncoct
+#        0 : vacuum
+#        1 : rectangular
+#        2 : triclinic
+#  NDFMIN: number of degrees of freedom subtracted for temperature
+#
+#         NTB    NDFMIN
+            1         3
+END
+PRINTOUT
+#  NTPR: print out energies, etc. every NTPR steps
+#  NTPP: =1 perform dihedral angle transition monitoring
+#     NTPR      NTPP
+        10         0
+END
+CONSTRAINT
+#	NTC
+#		1	"solvent"	solvent only
+#		2	"hydrogen"	solvent and solute bonds containing hydrogens
+#		3	"all"		solvent and solute all bonds
+#		4	"specified"	solvent and constraints in the CONSTRAINTS block
+	3
+#       NTCP: solute algorithm
+#             - shake
+#             - lincs
+#             - flexshake
+#       NTCP
+        shake
+#       NTCP0(1)..(3): algorithm options
+#         - shake: tolerance
+#         - lincs: order
+#         - flexshake: tolerance, readin, order
+#       NTCP0(1)   NTCP0(2)   NTCP0(3)
+        0.0001
+#	NTCS: solvent algorithm
+#             - shake
+#             - lincs
+#             - settle
+#       NTCS
+        shake
+#       NTCS0(1):  algorithm options
+#         - shake: tolerance
+#         - lincs: order
+#         - settle: no arguments
+#       NTCS0(1)
+        0.0001
+END
+FORCE
+# NTF(1..10): 0,1 determines terms used in force calculation
+#             0: do not include terms
+#             1: include terms
+# NEGR: >= 0 number of energy groups
+# NRE(1..NEGR): >= 1.0 last atom in each energy group
+# NTF(1..2) NTF(3..4) NTF(5..6) NTF(7..8) NTF(9)        NTF(10)
+# bonds     angles    improper  dihedral  electrostatic vdW
+# H         H         H         H
+  0         1         1         1         1             1
+# NEGR    NRE(1)    NRE(2)    ...      NRE(NEGR)
+     2       592     16135
+END
+PAIRLIST
+#       ALGORITHM: standard(0) (gromos96 like pairlist)
+#                  grid(1) (md++ grid pairlist)
+#       SIZE:      grid cell size (or auto = 0.5 * RCUTP)
+#       TYPE:      chargegoup(0) (chargegroup based cutoff)
+#                  atomic(1) (atom based cutoff)
+#
+#       ALGORITHM       NSNB    RCUTP   RCUTL   SIZE    TYPE
+	standard            5       0.8     1.4     auto    chargegroup
+END
+NONBONDED
+# NLRELE    1-3 method to handle electrostatic interactions
+#     1 : reaction-field
+#     2 : Ewald method
+#     3 : P3M method
+# APPAK     >= 0.0 reaction-field inverse Debye screening length
+# RCRF      >= 0.0 reaction-field radius 
+#   0.0 : set to infinity
+# EPSRF     = 0.0 || > 1.0 reaction-field permittivity
+#   0.0 : set to infinity 
+# NSHAPE    -1..10 lattice sum charge-shaping function
+#    -1 : gaussian
+# 0..10 : polynomial 
+# ASHAPE    > 0.0 width of the lattice sum charge-shaping function
+# NA2CALC   0,2 controls evaluation of lattice sum A2 term
+#     0 : set to zero
+#     2 : numerical
+# TOLA2     > 0.0 tolerance for numerical A2 evaluation 
+# EPSLS      = 0.0 || > 1.0 lattice sum permittivity (0.0 = tinfoil)
+# NKX, NKY, NKZ > 0 maximum absolute Ewald k-vector components
+# KCUT       > 0.0 Ewald k-space cutoff
+# NGX, NGY, NGZ > 0 P3M number of grid points
+# NASORD    1..5 order of mesh charge assignment function
+# NFDORD    0..5 order of the mesh finite difference operator
+#     0 : ik - differentiation
+#  1..5 : finite differentiation
+# NALIAS    > 0 number of mesh alias vectors considered
+# NSPORD        order of SPME B-spline functions (ignored! promd specific)
+# NQEVAL    >= 0 controls accuracy reevaluation
+#     0 : do not reevaluate
+#   > 0 : evaluate every NQEVAL steps
+# FACCUR    >= 0.0 rms force error threshold to recompute influence function
+# NRDGRD    0,1 read influence function
+#     0 : calculate influence function at simulation start up
+#     1 : read influence function from file (not yet implemented)
+# NWRGRD    0,1 write influence function
+#     0 : do not write
+#     1 : write at the end of the simulation (not yet implemented)
+# NLRLJ     0,1 controls long-range Lennard-Jones corrections
+#     0 : no corrections
+#     1 : do corrections (not yet implemented)
+# SLVDNS    > 0.0 average solvent density for long-range LJ correction (ignored)      
+# 
+#   NLRELE
+         1
+#    APPAK      RCRF     EPSRF  NSLFEXCL
+       0.0       1.4      61.0      1 
+#   NSHAPE    ASHAPE    NA2CLC     TOLA2    EPSLS
+        -1       1.4         2    0.1E-9      0.0
+#      NKX       NKY       NKZ       KCUT
+        10        10        10      100.0
+#      NGX       NGY       NGZ    NASORD    NFDORD    NALIAS    NSPORD
+        32        32        32         3         2         3         4
+#   NQEVAL    FACCUR    NRDGRD    NWRGDR
+         0       1.6         0         0
+#    NLRLJ    SLVDNS
+         0      33.3
+END
+POSITIONRES
+#    NTPOR 0..3 controls atom positions re(con)straining.
+#          0: no position re(con)straints.
+#          1: restraining with force constant CPOR
+#          2: restraining with force constant CPOR wieghted by
+#             atomic B-factors
+#          3: constraining
+#   NTPORB 0,1 controls reading of reference positions and
+#              B-factors
+#          0: read reference positions from startup file.
+#          1: read reference positions and B-factors from
+#             special file
+#   NTPORS 0,1 controls scaling of reference positions upon 
+#              pressure scaling
+#          0: do not scale reference positions
+#          1: scale reference positions
+#     CPOR >= 0 position restraining force constant
+#
+#   NTPOR  NTPORB  NTPORS    CPOR
+        1       1       0   2.5E4
+END
+#COMTRANSROT
+#    NSCM : controls system centre-of-mass (com) motion removal
+#           0: no com motion removal (default)
+#         < 0: com translation and rotation are removed every abs(NSCM)
+#              steps.
+#         > 0: com tranlsation is removed every NSCM steps.
+#     NSCM
+#      1000
+#END

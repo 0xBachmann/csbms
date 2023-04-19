@@ -1,0 +1,9 @@
+@topo ../topo/peptide.top
+@title GCN4p16-31 54A7
+@filter 10000
+@factor 10
+@noe ./NOElist.exp
+@lib ./noelib.54a7
+@parsetype 2
+@action
+@correction ./noecor.gromosXX

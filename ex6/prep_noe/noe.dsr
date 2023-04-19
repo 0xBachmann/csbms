@@ -1,0 +1,367 @@
+TITLE
+NOE distance restraints file for: GCN4p16-31 54A7 
+END
+DISTANCERESSPEC
+#     DISH      DISC
+       0.1     0.153
+#IDR1 JDR1 KDR1 LDR1 ICDR IDR2 JDR2 KDR2 LDR2 ICDR        R0        W0      NRAH
+#
+# 1  1    16  GLY    H   HN   1    15  VAL   CA   HA 
+  171    0    0    0    0  164  162  165  168    1      0.35         1         1
+# 1  1    16  GLY    H   HN   1    15  VAL    H   HN 
+  171    0    0    0    0  163    0    0    0    0       0.5         1         1
+# 1  1    15  VAL    H   HN   1    14  LEU   CA   HA 
+  163    0    0    0    0  155  153  156  160    1      0.35         1         1
+# 1  1    15  VAL    H   HN   1    14  LEU    H   HN 
+  163    0    0    0    0  154    0    0    0    0       0.5         1         1
+# 1  1    15  VAL    H   HN   1    13 LYSH    H   HN 
+  163    0    0    0    0  141    0    0    0    0      0.35         1         1
+# 1  1    14  LEU    H   HN   1    13 LYSH   CA   HA 
+  154    0    0    0    0  142  140  143  151    1      0.35         1         1
+# 1  1    14  LEU    H   HN   1    11  LEU   CA   HA 
+  154    0    0    0    0  120  118  121  125    1       0.5         1         1
+# 1  1    14  LEU    H   HN   1    10  ARG   CA   HA 
+  154    0    0    0    0  103  101  104  116    1       0.5         1         1
+# 1  1    14  LEU    H   HN   1    13 LYSH    H   HN 
+  154    0    0    0    0  141    0    0    0    0      0.27         1         1
+# 1  1    13 LYSH    H   HN   1    12 LYSH   CA   HA 
+  141    0    0    0    0  129  127  130  138    1      0.35         1         1
+# 1  1    13 LYSH    H   HN   1    10  ARG   CA   HA 
+  141    0    0    0    0  103  101  104  116    1       0.5         1         1
+# 1  1    13 LYSH    H   HN   1    12 LYSH    H   HN 
+  141    0    0    0    0  128    0    0    0    0      0.27         1         1
+# 1  1    13 LYSH    H   HN   1    11  LEU    H   HN 
+  141    0    0    0    0  119    0    0    0    0       0.5         1         1
+# 1  1    12 LYSH    H   HN   1    11  LEU    H   HN 
+  128    0    0    0    0  119    0    0    0    0      0.27         1         1
+# 1  1    12 LYSH    H   HN   1    10  ARG    H   HN 
+  128    0    0    0    0  102    0    0    0    0       0.5         1         1
+# 1  1    11  LEU    H   HN   1    10  ARG   CA   HA 
+  119    0    0    0    0  103  101  104  116    1      0.35         1         1
+# 1  1    11  LEU    H   HN   1     8  VAL   CA   HA 
+  119    0    0    0    0   89   87   90   93    1      0.35         1         1
+# 1  1    11  LEU    H   HN   1     7  GLU   CA   HA 
+  119    0    0    0    0   79   77   80   85    1       0.5         1         1
+# 1  1    11  LEU    H   HN   1    10  ARG    H   HN 
+  119    0    0    0    0  102    0    0    0    0      0.35         1         1
+# 1  1    11  LEU    H   HN   1     9  ALA    H   HN 
+  119    0    0    0    0   96    0    0    0    0       0.5         1         1
+# 1  1    10  ARG    H   HN   1     9  ALA   CA   HA 
+  102    0    0    0    0   97   95   98   99    1      0.35         1         1
+# 1  1    10  ARG    H   HN   1     7  GLU   CA   HA 
+  102    0    0    0    0   79   77   80   85    1      0.35         1         1
+# 1  1    10  ARG    H   HN   1     6  ASN   CA   HA 
+  102    0    0    0    0   68   66   69   75    1       0.5         1         1
+# 1  1    10  ARG    H   HN   1     9  ALA    H   HN 
+  102    0    0    0    0   96    0    0    0    0      0.27         1         1
+# 1  1     9  ALA    H   HN   1     8  VAL   CA   HA 
+   96    0    0    0    0   89   87   90   93    1      0.35         1         1
+# 1  1     9  ALA    H   HN   1     7  GLU   CA   HA 
+   96    0    0    0    0   79   77   80   85    1       0.5         1         1
+# 1  1     9  ALA    H   HN   1     6  ASN   CA   HA 
+   96    0    0    0    0   68   66   69   75    1      0.35         1         1
+# 1  1     9  ALA    H   HN   1     8  VAL    H   HN 
+   96    0    0    0    0   88    0    0    0    0      0.35         1         1
+# 1  1     9  ALA    H   HN   1     7  GLU    H   HN 
+   96    0    0    0    0   78    0    0    0    0       0.5         1         1
+# 1  1     8  VAL    H   HN   1     7  GLU   CA   HA 
+   88    0    0    0    0   79   77   80   85    1      0.35         1         1
+# 1  1     8  VAL    H   HN   1     6  ASN   CA   HA 
+   88    0    0    0    0   68   66   69   75    1       0.5         1         1
+# 1  1     8  VAL    H   HN   1     5  GLU   CA   HA 
+   88    0    0    0    0   58   56   59   64    1      0.35         1         1
+# 1  1     8  VAL    H   HN   1     4  LEU   CA   HA 
+   88    0    0    0    0   49   47   50   54    1       0.5         1         1
+# 1  1     8  VAL    H   HN   1     7  GLU    H   HN 
+   88    0    0    0    0   78    0    0    0    0      0.27         1         1
+# 1  1     8  VAL    H   HN   1     6  ASN    H   HN 
+   88    0    0    0    0   67    0    0    0    0       0.5         1         1
+# 1  1     7  GLU    H   HN   1     6  ASN   CA   HA 
+   78    0    0    0    0   68   66   69   75    1      0.35         1         1
+# 1  1     7  GLU    H   HN   1     4  LEU   CA   HA 
+   78    0    0    0    0   49   47   50   54    1       0.5         1         1
+# 1  1     7  GLU    H   HN   1     5  GLU   CA   HA 
+   78    0    0    0    0   58   56   59   64    1       0.5         1         1
+# 1  1     7  GLU    H   HN   1     6  ASN    H   HN 
+   78    0    0    0    0   67    0    0    0    0      0.35         1         1
+# 1  1     7  GLU    H   HN   1     5  GLU    H   HN 
+   78    0    0    0    0   57    0    0    0    0       0.5         1         1
+# 1  1     6  ASN    H   HN   1     5  GLU   CA   HA 
+   67    0    0    0    0   58   56   59   64    1      0.35         1         1
+# 1  1     6  ASN    H   HN   1     3 HISB   CA   HA 
+   67    0    0    0    0   35   33   36   45    1       0.5         1         1
+# 1  1     6  ASN    H   HN   1     2  TYR   CA   HA 
+   67    0    0    0    0   17   15   18   31    1       0.5         1         1
+# 1  1     6  ASN    H   HN   1     5  GLU    H   HN 
+   67    0    0    0    0   57    0    0    0    0      0.27         1         1
+# 1  1     6  ASN    H   HN   1     4  LEU    H   HN 
+   67    0    0    0    0   48    0    0    0    0       0.5         1         1
+# 1  1     5  GLU    H   HN   1     4  LEU   CA   HA 
+   57    0    0    0    0   49   47   50   54    1      0.35         1         1
+# 1  1     5  GLU    H   HN   1     3 HISB   CA   HA 
+   57    0    0    0    0   35   33   36   45    1       0.5         1         1
+# 1  1     5  GLU    H   HN   1     2  TYR   CA   HA 
+   57    0    0    0    0   17   15   18   31    1       0.5         1         1
+# 1  1     5  GLU    H   HN   1     3 HISB    H   HN 
+   57    0    0    0    0   34    0    0    0    0       0.5         1         1
+# 1  1     5  GLU    H   HN   1     4  LEU    H   HN 
+   57    0    0    0    0   48    0    0    0    0      0.27         1         1
+# 1  1     4  LEU    H   HN   1     3 HISB   CA   HA 
+   48    0    0    0    0   35   33   36   45    1      0.35         1         1
+# 1  1     4  LEU    H   HN   1     3 HISB    H   HN 
+   48    0    0    0    0   34    0    0    0    0       0.5         1         1
+# 1  1     3 HISB    H   HN   1     2  TYR    H   HN 
+   34    0    0    0    0   16    0    0    0    0       0.5         1         1
+# 1  1     3 HISB    H   HN   1     1  ASN    H   HN 
+   34    0    0    0    0    5    0    0    0    0       0.5         1         1
+# 1  1     2  TYR    H   HN   1     1  ASN   CA   HA 
+   16    0    0    0    0    6    4    7   13    1       0.5         1         1
+# 1  1     2  TYR    H   HN   1     1  ASN    H   HN 
+   16    0    0    0    0    5    0    0    0    0       0.5         1         1
+# 1  1     1  ASN   CA   HA   1     4  LEU   CB  HB1 
+    6    4    7   13    1   50   49   51    0    4       0.5         1         1
+# 1  1     1  ASN   CA   HA   1     4  LEU   CB  HB2 
+    6    4    7   13    1   50   51   49    0    4       0.5         1         1
+# 1  1     2  TYR   CA   HA   1     5  GLU   CB  HB@ 
+   17   15   18   31    1   59   58   60    0    3      0.59         1         1
+# 1  1     3 HISB   CA   HA   1     6  ASN   CB  HB@ 
+   35   33   36   45    1   69   68   70    0    3      0.44         1         1
+# 1  1     4  LEU   CA   HA   1     7  GLU   CB  HB@ 
+   49   47   50   54    1   80   79   81    0    3      0.44         1         1
+# 1  1     4  LEU   CA   HA   1     7  GLU   CG  HG@ 
+   49   47   50   54    1   81   80   82    0    3      0.59         1         1
+# 1  1     5  GLU   CA   HA   1     8  VAL   CB   HB 
+   58   56   59   64    1   90   89   91   92    1      0.35         1         1
+# 1  1     6  ASN   CA   HA   1     9  ALA   CB  HB@ 
+   68   66   69   75    1   98   97    0    0    5      0.45         1         1
+# 1  1     7  GLU   CA   HA   1    10  ARG   CB  HB1 
+   79   77   80   85    1  104  103  105    0    4      0.35         1         1
+# 1  1     7  GLU   CA   HA   1    10  ARG   CB  HB2 
+   79   77   80   85    1  104  105  103    0    4      0.35         1         1
+# 1  1     8  VAL   CA   HA   1    11  LEU   CB  HB@ 
+   89   87   90   93    1  121  120  122    0    3      0.44         1         1
+# 1  1     9  ALA   CA   HA   1    12 LYSH   CB  HB1 
+   97   95   98   99    1  130  129  131    0    4       0.5         1         1
+# 1  1     9  ALA   CA   HA   1    12 LYSH   CB  HB2 
+   97   95   98   99    1  130  131  129    0    4       0.5         1         1
+# 1  1    11  LEU   CA   HA   1    14  LEU   CB  HB@ 
+  120  118  121  125    1  156  155  157    0    3      0.44         1         1
+# 1  1    12 LYSH   CA   HA   1    15  VAL   CB   HB 
+  129  127  130  138    1  165  164  166  167    1       0.5         1         1
+# 1  1     5  GLU    H   HN   1     5  GLU   CB  HB@ 
+   57    0    0    0    0   59   58   60    0    3      0.36         1         1
+# 1  1     5  GLU    H   HN   1     5  GLU   CG  HG@ 
+   57    0    0    0    0   60   59   61    0    3      0.36         1         1
+# 1  1     5  GLU    H   HN   1     4  LEU   CB  HB1 
+   57    0    0    0    0   50   49   51    0    4      0.35         1         1
+# 1  1     5  GLU    H   HN   1     4  LEU   CB  HB2 
+   57    0    0    0    0   50   51   49    0    4      0.35         1         1
+# 1  1     5  GLU    H   HN   1     4  LEU   CG  HD@ 
+   57    0    0    0    0   51   52   53    0    6      0.72         1         1
+# 1  1     6  ASN    H   HN   1     6  ASN   CB  HB@ 
+   67    0    0    0    0   69   68   70    0    3      0.36         1         1
+# 1  1     6  ASN    H   HN   1     5  GLU   CB  HB@ 
+   67    0    0    0    0   59   58   60    0    3      0.59         1         1
+# 1  1     6  ASN    H   HN   1     5  GLU   CG  HG@ 
+   67    0    0    0    0   60   59   61    0    3      0.59         1         1
+# 1  1     6  ASN    H   HN   1    10  ARG   CG  HG@ 
+   67    0    0    0    0  105  104  106    0    3      0.59         1         1
+# 1  1     7  GLU    H   HN   1     7  GLU   CB  HB@ 
+   78    0    0    0    0   80   79   81    0    3      0.36         1         1
+# 1  1     7  GLU    H   HN   1     7  GLU   CG  HG@ 
+   78    0    0    0    0   81   80   82    0    3      0.44         1         1
+# 1  1     7  GLU    H   HN   1     6  ASN   CB  HB@ 
+   78    0    0    0    0   69   68   70    0    3      0.44         1         1
+# 1  1     7  GLU    H   HN   1     8  VAL   CB  HG@ 
+   78    0    0    0    0   90   91   92    0    6      0.57         1         1
+# 1  1     2  TYR    H   HN   1     2  TYR   CG  HD@ 
+   16    0    0    0    0   19    0    0    0   -1      0.71         1         1
+# 1  1     6  ASN    H   HN   1     6  ASN  ND2  HD@ 
+   67    0    0    0    0   73   74    0    0   -1       0.6         1         1
+# 1  1    14  LEU    H   HN   1    14  LEU   CB  HB@ 
+  154    0    0    0    0  156  155  157    0    3      0.44         1         1
+# 1  1    14  LEU    H   HN   1    14  LEU   CG   HG 
+  154    0    0    0    0  157  156  158  159    1      0.35         1         1
+# 1  1     9  ALA    H   HN   1     8  VAL   CB   HB 
+   96    0    0    0    0   90   89   91   92    1      0.35         1         1
+# 1  1     9  ALA    H   HN   1     9  ALA   CB  HB@ 
+   96    0    0    0    0   98   97    0    0    5      0.52         1         1
+# 1  1     9  ALA    H   HN   1     8  VAL  CG1 HG1@ 
+   96    0    0    0    0   91   90    0    0    5       0.7         1         1
+# 1  1     9  ALA    H   HN   1     8  VAL  CG2 HG2@ 
+   96    0    0    0    0   92   90    0    0    5       0.7         1         1
+# 1  1     9  ALA    H   HN   1    10  ARG   CB  HB@ 
+   96    0    0    0    0  104  103  105    0    3      0.69         1         1
+# 1  1     4  LEU    H   HN   1     3 HISB   CB  HB1 
+   48    0    0    0    0   36   35   37    0    4       0.5         1         1
+# 1  1     4  LEU    H   HN   1     3 HISB   CB  HB2 
+   48    0    0    0    0   36   37   35    0    4       0.5         1         1
+# 1  1    15  VAL    H   HN   1    15  VAL   CB   HB 
+  163    0    0    0    0  165  164  166  167    1      0.35         1         1
+# 1  1    15  VAL    H   HN   1    14  LEU   CB  HB@ 
+  163    0    0    0    0  156  155  157    0    3      0.59         1         1
+# 1  1    15  VAL    H   HN   1    14  LEU   CG   HG 
+  163    0    0    0    0  157  156  158  159    1      0.27         1         1
+# 1  1    15  VAL    H   HN   1    15  VAL   CB  HG@ 
+  163    0    0    0    0  165  166  167    0    6      0.57         1         1
+# 1  1     4  LEU    H   HN   1     4  LEU   CB  HB@ 
+   48    0    0    0    0   50   49   51    0    3      0.59         1         1
+# 1  1     8  VAL    H   HN   1     8  VAL   CB   HB 
+   88    0    0    0    0   90   89   91   92    1       0.6         1         1
+# 1  1     8  VAL    H   HN   1     7  GLU   CG  HG@ 
+   88    0    0    0    0   81   80   82    0    3      0.44         1         1
+# 1  1     8  VAL    H   HN   1     7  GLU   CB  HB@ 
+   88    0    0    0    0   80   79   81    0    3      0.44         1         1
+# 1  1     8  VAL    H   HN   1     8  VAL   CB  HG@ 
+   88    0    0    0    0   90   91   92    0    6      0.68         1         1
+# 1  1    10  ARG    H   HN   1     7  GLU   CB  HB@ 
+  102    0    0    0    0   80   79   81    0    3      0.59         1         1
+# 1  1    10  ARG    H   HN   1    10  ARG   CB  HB2 
+  102    0    0    0    0  104  105  103    0    4      0.35         1         1
+# 1  1    10  ARG    H   HN   1    10  ARG   CB  HB1 
+  102    0    0    0    0  104  103  105    0    4      0.35         1         1
+# 1  1    10  ARG    H   HN   1    10  ARG   CG  HG2 
+  102    0    0    0    0  105  106  104    0    4       0.5         1         1
+# 1  1    10  ARG    H   HN   1    10  ARG   CG  HG1 
+  102    0    0    0    0  105  104  106    0    4       0.5         1         1
+# 1  1    10  ARG    H   HN   1     9  ALA   CB  HB@ 
+  102    0    0    0    0   98   97    0    0    5       0.4         1         1
+# 1  1    11  LEU    H   HN   1    10  ARG   CB  HB1 
+  119    0    0    0    0  104  103  105    0    4      0.35         1         1
+# 1  1    11  LEU    H   HN   1    10  ARG   CB  HB2 
+  119    0    0    0    0  104  105  103    0    4      0.35         1         1
+# 1  1    11  LEU    H   HN   1    10  ARG   CG  HG2 
+  119    0    0    0    0  105  106  104    0    4       0.5         1         1
+# 1  1    11  LEU    H   HN   1    10  ARG   CG  HG1 
+  119    0    0    0    0  105  104  106    0    4       0.5         1         1
+# 1  1    11  LEU    H   HN   1    11  LEU   CB  HB1 
+  119    0    0    0    0  121  120  122    0    4      0.35         1         1
+# 1  1    11  LEU    H   HN   1    11  LEU   CB  HB2 
+  119    0    0    0    0  121  122  120    0    4      0.35         1         1
+# 1  1    11  LEU    H   HN   1    11  LEU  CD1 HD1@ 
+  119    0    0    0    0  123  122    0    0    5       0.6         1         1
+# 1  1    11  LEU    H   HN   1    11  LEU  CD2 HD2@ 
+  119    0    0    0    0  124  122    0    0    5       0.6         1         1
+# 1  1     3 HISB  HE1  HE1   1     3 HISB   CB  HB@ 
+   42    0    0    0    0   36   35   37    0    3      0.59         1         1
+# 1  1     3 HISB  HE1  HE1   1     4  LEU  CD1 HD1@ 
+   42    0    0    0    0   52   51    0    0    5       0.6         1         1
+# 1  1     3 HISB  HE1  HE1   1     4  LEU  CD2 HD2@ 
+   42    0    0    0    0   53   51    0    0    5       0.6         1         1
+# 1  1     3 HISB  HE1  HE1   1     2  TYR   CZ  HE@ 
+   42    0    0    0    0   28    0    0    0   -1      0.71         1         1
+# 1  1     3 HISB  HE1  HE1   1     2  TYR   CG  HD@ 
+   42    0    0    0    0   19    0    0    0   -1      0.71         1         1
+# 1  1     2  TYR   CG  HD@   1     2  TYR   CB  HB1 
+   19    0    0    0   -1   18   17   19    0    4      0.56         1         1
+# 1  1     2  TYR   CG  HD@   1     2  TYR   CB  HB2 
+   19    0    0    0   -1   18   19   17    0    4      0.56         1         1
+# 1  1     2  TYR   CG  HD@   1     4  LEU  CD1 HD1@ 
+   19    0    0    0   -1   52   51    0    0    5      0.81         1         1
+# 1  1     2  TYR   CG  HD@   1     4  LEU  CD2 HD2@ 
+   19    0    0    0   -1   53   51    0    0    5      0.81         1         1
+# 1  1     2  TYR   CG  HD@   1     2  TYR   CA   HA 
+   19    0    0    0   -1   17   15   18   31    1      0.56         1         1
+# 1  1     2  TYR   CZ  HE@   1     2  TYR   CA   HA 
+   28    0    0    0   -1   17   15   18   31    1      0.81         1         1
+# 1  1     2  TYR   CZ  HE@   1     2  TYR   CB  HB1 
+   28    0    0    0   -1   18   17   19    0    4      0.81         1         1
+# 1  1     2  TYR   CZ  HE@   1     2  TYR   CB  HB2 
+   28    0    0    0   -1   18   19   17    0    4      0.81         1         1
+# 1  1     2  TYR   CZ  HE@   1     4  LEU  CD1 HD1@ 
+   28    0    0    0   -1   52   51    0    0    5      0.76         1         1
+# 1  1     2  TYR   CZ  HE@   1     4  LEU  CD2 HD2@ 
+   28    0    0    0   -1   53   51    0    0    5      0.76         1         1
+# 1  1     3 HISB  HD2  HD2   1     3 HISB   CB  HB@ 
+   40    0    0    0    0   36   35   37    0    3      0.36         1         1
+# 1  1     3 HISB  HD2  HD2   1     4  LEU  CD1 HD1@ 
+   40    0    0    0    0   52   51    0    0    5       0.6         1         1
+# 1  1     3 HISB  HD2  HD2   1     4  LEU  CD2 HD2@ 
+   40    0    0    0    0   53   51    0    0    5       0.6         1         1
+# 1  1     3 HISB  HD2  HD2   1     3 HISB   CA   HA 
+   40    0    0    0    0   35   33   36   45    1      0.35         1         1
+# 1  1     3 HISB  HE1  HE1   1     7  GLU   CG  HG@ 
+   42    0    0    0    0   81   80   82    0    3      0.59         1         1
+# 1  1     3 HISB  HD2  HD2   1     5  GLU   CB  HB@ 
+   40    0    0    0    0   59   58   60    0    3      0.59         1         1
+# 1  1     3 HISB  HD2  HD2   1     5  GLU   CG  HG@ 
+   40    0    0    0    0   60   59   61    0    3      0.59         1         1
+# 1  1     3 HISB  HD2  HD2   1     7  GLU   CG  HG@ 
+   40    0    0    0    0   81   80   82    0    3      0.59         1         1
+# 1  1     2  TYR   CG  HD@   1     5  GLU   CB  HB@ 
+   19    0    0    0   -1   59   58   60    0    3      0.85         1         1
+# 1  1     2  TYR   CZ  HE@   1     7  GLU   CB  HB@ 
+   28    0    0    0   -1   80   79   81    0    3      0.85         1         1
+# 1  1     2  TYR   CG  HD@   1     5  GLU   CG  HG@ 
+   19    0    0    0   -1   60   59   61    0    3       0.8         1         1
+# 1  1     2  TYR   CG  HD@   1     7  GLU   CG  HG@ 
+   19    0    0    0   -1   81   80   82    0    3       0.8         1         1
+# 1  1     2  TYR   CZ  HE@   1     5  GLU   CG  HG@ 
+   28    0    0    0   -1   60   59   61    0    3       0.8         1         1
+# 1  1     2  TYR   CZ  HE@   1     7  GLU   CG  HG@ 
+   28    0    0    0   -1   81   80   82    0    3       0.8         1         1
+# 1  1     7  GLU   CG  HG@   1    10  ARG   CD  HD1 
+   81   80   82    0    3  106  105  107    0    4      0.44         1         1
+# 1  1     7  GLU   CG  HG@   1    10  ARG   CD  HD2 
+   81   80   82    0    3  106  107  105    0    4      0.44         1         1
+# 1  1    10  ARG   CD  HD1   1     6  ASN   CB  HB@ 
+  106  105  107    0    4   69   68   70    0    3      0.59         1         1
+# 1  1    10  ARG   CD  HD1   1    10  ARG   CA   HA 
+  106  105  107    0    4  103  101  104  116    1       0.5         1         1
+# 1  1    10  ARG   CD  HD1   1     7  GLU   CA   HA 
+  106  105  107    0    4   79   77   80   85    1       0.5         1         1
+# 1  1    10  ARG   CD  HD2   1     6  ASN   CB  HB@ 
+  106  107  105    0    4   69   68   70    0    3      0.59         1         1
+# 1  1    10  ARG   CD  HD2   1    10  ARG   CA   HA 
+  106  107  105    0    4  103  101  104  116    1       0.5         1         1
+# 1  1    10  ARG   CD  HD2   1     7  GLU   CA   HA 
+  106  107  105    0    4   79   77   80   85    1      0.35         1         1
+# 1  1    11  LEU  CD1 HD1@   1    10  ARG   CB  HB@ 
+  123  122    0    0    5  104  103  105    0    3      0.54         1         1
+# 1  1    11  LEU  CD2 HD2@   1    10  ARG   CB  HB@ 
+  124  122    0    0    5  104  103  105    0    3      0.54         1         1
+# 1  1     7  GLU   CA   HA   1    10  ARG   CG  HG@ 
+   79   77   80   85    1  105  104  106    0    3      0.44         1         1
+# 1  1     7  GLU   CG  HG@   1     4  LEU   CB  HB@ 
+   81   80   82    0    3   50   49   51    0    3      0.68         1         1
+# 1  1     7  GLU   CG  HG@   1     8  VAL   CB  HG@ 
+   81   80   82    0    3   90   91   92    0    6      0.81         1         1
+# 1  1     7  GLU   CG  HG@   1     4  LEU   CG  HD@ 
+   81   80   82    0    3   51   52   53    0    6      0.66         1         1
+# 1  1     7  GLU   CB  HB@   1     4  LEU   CB  HB@ 
+   80   79   81    0    3   50   49   51    0    3      0.68         1         1
+# 1  1     7  GLU   CB  HB@   1    11  LEU   CB  HB@ 
+   80   79   81    0    3  121  120  122    0    3      0.68         1         1
+# 1  1     7  GLU   CB  HB@   1    10  ARG   CD  HD@ 
+   80   79   81    0    3  106  105  107    0    3      0.68         1         1
+# 1  1     7  GLU   CB  HB@   1     4  LEU   CA   HA 
+   80   79   81    0    3   49   47   50   54    1      0.44         1         1
+# 1  1     9  ALA   CB  HB@   1     6  ASN   CB  HB@ 
+   98   97    0    0    5   69   68   70    0    3      0.64         1         1
+# 1  1     6  ASN   CA   HA   1     5  GLU   CB  HB@ 
+   68   66   69   75    1   59   58   60    0    3      0.59         1         1
+# 1  1     6  ASN   CA   HA   1     5  GLU   CG  HG@ 
+   68   66   69   75    1   60   59   61    0    3      0.59         1         1
+# 1  1     3 HISB   CA   HA   1     4  LEU   CB  HB1 
+   35   33   36   45    1   50   49   51    0    4      0.55         1         1
+# 1  1     3 HISB   CA   HA   1     4  LEU   CB  HB2 
+   35   33   36   45    1   50   51   49    0    4      0.55         1         1
+# 1  1     2  TYR   CA   HA   1     5  GLU   CG  HG@ 
+   17   15   18   31    1   60   59   61    0    3      0.59         1         1
+# 1  1     2  TYR   CB  HB@   1     4  LEU   CG  HD@ 
+   18   17   19    0    3   51   52   53    0    6      0.66         1         1
+# 1  1     2  TYR   CB  HB@   1     4  LEU   CB  HB@ 
+   18   17   19    0    3   50   49   51    0    3      0.53         1         1
+# 1  1     1  ASN   CA   HA   1     4  LEU   CG HD@@ 
+    6    4    7   13    1   51   52   53    0    6      0.72         1         1
+# 1  1     8  VAL   CA   HA   1    11  LEU   CB  HB@ 
+   89   87   90   93    1  121  120  122    0    3      0.59         1         1
+# 1  1     8  VAL   CA   HA   1    11  LEU   CG   HG 
+   89   87   90   93    1  122  121  123  124    1       0.5         1         1
+# 1  1     8  VAL   CA   HA   1     7  GLU   CG  HG@ 
+   89   87   90   93    1   81   80   82    0    3      0.59         1         1
+# 1  1     8  VAL   CB  HG@   1     7  GLU   CG  HG@ 
+   90   91   92    0    6   81   80   82    0    3      0.81         1         1
+# 1  1     8  VAL   CB HG@@   1     5  GLU   CA   HA 
+   90   91   92    0    6   58   56   59   64    1      0.72         1         1
+END

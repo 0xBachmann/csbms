@@ -1,0 +1,13 @@
+#!/bin/sh
+
+GROMOS=md
+
+$GROMOS \
+  @topo ../topo/protein.top \
+  @conf ../box/protein_box.cnf \
+  @posresspec protein_box.por \
+  @refpos protein_box.rpr \
+  @fin  protein_box_min.cnf \
+  @input em_protein_box.imd > em_protein_box.out
+
+

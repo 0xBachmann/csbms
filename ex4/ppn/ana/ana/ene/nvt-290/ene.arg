@@ -1,0 +1,44 @@
+@prop           totene totpot
+@topo           ../../../topo/ppn_512.top
+@library        ../../../../utils/ene_ana.md++.lib
+@en_files
+../../../nvt-290/ppn_nvt_290_21.tre.gz
+../../../nvt-290/ppn_nvt_290_22.tre.gz
+../../../nvt-290/ppn_nvt_290_23.tre.gz
+../../../nvt-290/ppn_nvt_290_24.tre.gz
+../../../nvt-290/ppn_nvt_290_25.tre.gz
+../../../nvt-290/ppn_nvt_290_26.tre.gz
+../../../nvt-290/ppn_nvt_290_27.tre.gz
+../../../nvt-290/ppn_nvt_290_28.tre.gz
+../../../nvt-290/ppn_nvt_290_29.tre.gz
+../../../nvt-290/ppn_nvt_290_30.tre.gz
+../../../nvt-290/ppn_nvt_290_31.tre.gz
+../../../nvt-290/ppn_nvt_290_32.tre.gz
+../../../nvt-290/ppn_nvt_290_33.tre.gz
+../../../nvt-290/ppn_nvt_290_34.tre.gz
+../../../nvt-290/ppn_nvt_290_35.tre.gz
+../../../nvt-290/ppn_nvt_290_36.tre.gz
+../../../nvt-290/ppn_nvt_290_37.tre.gz
+../../../nvt-290/ppn_nvt_290_38.tre.gz
+../../../nvt-290/ppn_nvt_290_39.tre.gz
+../../../nvt-290/ppn_nvt_290_40.tre.gz
+../../../nvt-290/ppn_nvt_290_41.tre.gz
+../../../nvt-290/ppn_nvt_290_42.tre.gz
+../../../nvt-290/ppn_nvt_290_43.tre.gz
+../../../nvt-290/ppn_nvt_290_44.tre.gz
+../../../nvt-290/ppn_nvt_290_45.tre.gz
+../../../nvt-290/ppn_nvt_290_46.tre.gz
+../../../nvt-290/ppn_nvt_290_47.tre.gz
+../../../nvt-290/ppn_nvt_290_48.tre.gz
+../../../nvt-290/ppn_nvt_290_49.tre.gz
+../../../nvt-290/ppn_nvt_290_50.tre.gz
+../../../nvt-290/ppn_nvt_290_51.tre.gz
+../../../nvt-290/ppn_nvt_290_52.tre.gz
+../../../nvt-290/ppn_nvt_290_53.tre.gz
+../../../nvt-290/ppn_nvt_290_54.tre.gz
+../../../nvt-290/ppn_nvt_290_55.tre.gz
+../../../nvt-290/ppn_nvt_290_56.tre.gz
+../../../nvt-290/ppn_nvt_290_57.tre.gz
+../../../nvt-290/ppn_nvt_290_58.tre.gz
+../../../nvt-290/ppn_nvt_290_59.tre.gz
+../../../nvt-290/ppn_nvt_290_60.tre.gz

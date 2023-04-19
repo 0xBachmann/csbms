@@ -1,0 +1,14 @@
+@sys        eq_peptide
+@bin        /usr/local/gromos-0614/bin/md_mpi
+@dir            /home/weihuang/ex6/eq
+@files
+    topo      ../topo/peptide.top
+    input     equilibration.imd
+        coord     ../box/peptide_H2O.cnf
+        posresspec ../box/peptide_H2O.por
+        refpos     ../box/peptide_H2O.rpr
+@template   /usr/local/gromos-0614/doc/mk_script/mk_script.4.procs.lib
+@version        md++
+@joblist        equilibration.jobs
+
+

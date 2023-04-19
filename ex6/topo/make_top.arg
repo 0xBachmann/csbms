@@ -1,0 +1,5 @@
+# maketop
+@build ../forcefield/54a7_ACE_CONH2.mtb
+@param ../forcefield/54a7.ifp 
+@seq   ACE ASN TYR HISB LEU GLU ASN GLU VAL ALA ARG LEU LYSH LYSH LEU VAL GLY CONH2
+@solv  H2O

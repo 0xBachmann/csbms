@@ -1,0 +1,9 @@
+#!/bin/sh
+
+GROMOS=md
+
+$GROMOS \
+  @topo ../topo/protein.top \
+  @conf ../coord/protein_g96.cnf \
+  @fin  protein_min.cnf \
+  @input em_protein.imd > protein_min.out

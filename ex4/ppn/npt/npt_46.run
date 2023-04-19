@@ -1,0 +1,69 @@
+#!/bin/sh
+
+# first we set some variables
+NAME=`whoami`
+PROGRAM=/cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+SIMULDIR=/cluster/home/jbachmann/ex4/ppn/npt
+
+# create temporary directory
+WORKDIR=${SIMULDIR}/tmp
+mkdir -p ${WORKDIR}
+cd       ${WORKDIR}
+
+# set the input files
+TOPO=${SIMULDIR}/../topo/ppn_512.top
+IUNIT=${SIMULDIR}/npt_46.imd
+INPUTCRD=${SIMULDIR}/npt_45.cnf
+
+#set the output files
+OUNIT=npt_46.omd
+OUTPUTCRD=npt_46.cnf
+OUTPUTTRX=npt_46.trc
+OUTPUTTRE=npt_46.tre
+
+
+MDOK=1
+
+${PROGRAM} \
+	@topo        ${TOPO} \
+	@conf        ${INPUTCRD} \
+	@input       ${IUNIT} \
+	@fin         ${OUTPUTCRD} \
+	@trc         ${OUTPUTTRX} \
+	@tre         ${OUTPUTTRE}\
+	>            ${OUNIT}
+grep "finished successfully" ${OUNIT} > /dev/null || MDOK=0
+
+uname -a >> ${OUNIT}
+
+# compress some files
+gzip ${OUTPUTTRX}
+gzip ${OUTPUTTRE}
+
+# copy the files back
+OK=1
+cp ${OUNIT}               ${SIMULDIR} || OK=0
+cp ${OUTPUTCRD}           ${SIMULDIR} || OK=0
+cp ${OUTPUTTRX}.gz        ${SIMULDIR} || OK=0
+cp ${OUTPUTTRE}.gz        ${SIMULDIR} || OK=0
+
+# clean up after successful run
+if `test ${OK} -eq 0`; then
+  uname -a > mess;
+  echo 'cp failed for npt, run 46' >> mess;
+  Mail -s "ERROR" ${NAME} < mess;
+  cd ${SIMULDIR};
+else
+  cd ${SIMULDIR};
+  rm ${WORKDIR}/*;
+  rmdir ${WORKDIR};
+fi
+
+# stop if MD was not succesfull
+if `test ${MDOK} -eq 0`; then
+  exit
+fi
+
+# perform last command (usually submit next job)
+cd ${SIMULDIR}
+bsub -W 4:00 -n 4 -J npt_47 -o ${SIMULDIR}/npt_47.out < npt_47.run 

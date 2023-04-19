@@ -1,0 +1,22 @@
+TITLE
+TO_DO
+END
+PERTATOMPARAM
+# number of perturbed atoms
+    3
+#  
+#   NR RES NAME IAC(A)  MASS(A)  CHARGE(A) IAC(B) MASS(B) CHARGE(B)   ALJ  ACRF
+    TO_DO
+END
+PERTBONDSTRETCH
+# number of perturbed bonds
+    1
+#   atom(i) atom(j) bond_type(A) bond_type(B)
+    TO_DO
+END
+PERTBONDANGLE
+# number of perturbed bond angles
+    2
+#   atom(i) atom(j) atom(k) type(A) type(B)
+    TO_DO
+END

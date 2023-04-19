@@ -1,0 +1,8 @@
+# Usage:
+#
+# ene_ana
+    @en_files    ../../md/protein_298K_1.tre.gz 
+                 ../../md/protein_298K_2.tre.gz
+    @prop        solutemp2 solvtemp2 pressu totene totpot totkin 
+    @library     ene_ana.md++-your-trajectory.lib 
+    #@library     ene_ana.md++-10ns-trajectoy.lib

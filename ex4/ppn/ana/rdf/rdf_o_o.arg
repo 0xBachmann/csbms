@@ -1,0 +1,48 @@
+@topo   ../../topo/ppn_512.top
+@pbc    r
+@centre a:O
+@with   a:O
+@cut    1.4
+@grid   100
+@nointra
+@traj
+../../npt/npt_21.trc.gz
+../../npt/npt_22.trc.gz
+../../npt/npt_23.trc.gz
+../../npt/npt_24.trc.gz
+../../npt/npt_25.trc.gz
+../../npt/npt_26.trc.gz
+../../npt/npt_27.trc.gz
+../../npt/npt_28.trc.gz
+../../npt/npt_29.trc.gz
+../../npt/npt_30.trc.gz
+../../npt/npt_31.trc.gz
+../../npt/npt_32.trc.gz
+../../npt/npt_33.trc.gz
+../../npt/npt_34.trc.gz
+../../npt/npt_35.trc.gz
+../../npt/npt_36.trc.gz
+../../npt/npt_37.trc.gz
+../../npt/npt_38.trc.gz
+../../npt/npt_39.trc.gz
+../../npt/npt_40.trc.gz
+../../npt/npt_41.trc.gz
+../../npt/npt_42.trc.gz
+../../npt/npt_43.trc.gz
+../../npt/npt_44.trc.gz
+../../npt/npt_45.trc.gz
+../../npt/npt_46.trc.gz
+../../npt/npt_47.trc.gz
+../../npt/npt_48.trc.gz
+../../npt/npt_49.trc.gz
+../../npt/npt_50.trc.gz
+../../npt/npt_51.trc.gz
+../../npt/npt_52.trc.gz
+../../npt/npt_53.trc.gz
+../../npt/npt_54.trc.gz
+../../npt/npt_55.trc.gz
+../../npt/npt_56.trc.gz
+../../npt/npt_57.trc.gz
+../../npt/npt_58.trc.gz
+../../npt/npt_59.trc.gz
+../../npt/npt_60.trc.gz

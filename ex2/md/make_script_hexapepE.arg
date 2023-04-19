@@ -1,0 +1,7 @@
+@sys hexapepE
+@bin /cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+@dir /cluster/home/jbachmann/ex2/md/
+@files topo ../topo/hexapepE_54a7.top input hexapepE_md.imd coord ../min/hexapepE_min.cnf
+@template mk_script.4.procs.lib
+@version md++
+@script 1 50

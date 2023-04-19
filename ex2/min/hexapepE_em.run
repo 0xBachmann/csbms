@@ -1,0 +1,8 @@
+#!/bin/sh
+GROMOS=/cluster/work/igc/CSBMS/GROMOS/gromosXX/bin/md
+
+$GROMOS \
+  @topo ../topo/hexapepE_54a7.top \
+  @conf ../ion/hexapepE_box.cnf \
+  @fin  hexapepE_min.cnf \
+  @input hexapepE_em.imd > hexapepE_em.omd

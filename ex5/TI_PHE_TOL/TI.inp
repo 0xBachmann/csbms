@@ -1,0 +1,139 @@
+TITLE
+Input parameter file for TI simulations
+END
+SYSTEM
+#      NPM      NSM
+         1     1200
+END
+STEP
+#   NSTLIM         T        DT
+    500000         0     0.002
+END
+INITIALISE
+# Default values for NTI values: 0
+#   NTIVEL    NTISHK    NTINHT    NTINHB
+         0         0         0         0
+#   NTISHI    NTIRTC    NTICOM
+         1         0         0
+#   NTISTI
+         0
+#       IG     TEMPI
+    210185         0
+END
+BOUNDCOND
+#      NTB    NDFMIN
+         1         3
+END
+MULTIBATH
+# ALGORITHM:
+#      weak-coupling:      use weak-coupling scheme
+#      nose-hoover:        use Nose Hoover scheme
+#      nose-hoover-chains: use Nose Hoover chains scheme
+# NUM: number of chains in Nose Hoover chains scheme
+#      !! only specify NUM when needed !!
+# NBATHS: number of temperature baths to couple to
+#          ALGORITHM
+                   0
+#  NBATHS
+         1
+# TEMP0(1 ... NBATHS)  TAU(1 ... NBATHS)
+       300       0.1
+#   DOFSET: number of distiguishable sets of d.o.f.
+         1
+# LAST(1 ... DOFSET)  COMBATH(1 ... DOFSET)  IRBATH(1 ... DOFSET)
+       3613   1   1
+END
+PRESSURESCALE
+#	COUPLE:	off(0), calc(1), scale(2)
+#	SCALE:  off(0), iso(1), aniso(2), full(3), semianiso(4)
+#	VIRIAL: none(0), atomic(1), group(2)
+#
+#   COUPLE  SCALE   COMP        TAUP    VIRIAL
+      2      1     0.0004575     0.5       2
+#   SEMI (semianisotropic couplings: X, Y, Z)
+#       e.g. 1 1 2: x and y jointly coupled and z separately coupled 
+#       e.g. 0 0 1: constant area (xy-plane) and z coupled to a bath
+    1 1 1
+#   reference pressure
+    0.06102     0.00000     0.00000
+    0.00000     0.06102     0.00000
+    0.00000     0.00000     0.06102
+END
+CONSTRAINT
+# NTC
+    3
+#      NTCP  NTCP0(1)
+          1    0.0001
+#      NTCS   NTCS0(1)
+          1    0.0001
+END
+FORCE
+#      NTF array
+# bonds    angles   imp.     dihe     charge nonbonded
+  0        1        1        1        1      1
+# NEGR    NRE(1)    NRE(2)    ...      NRE(NEGR)
+     2
+      13   3613
+END
+COMTRANSROT
+#     NSCM
+      1000
+END
+PAIRLIST
+# algorithm    NSNB   RCUTP   RCUTL    SIZE    TYPE
+         0       5     0.8     1.4     0.4       0
+END
+NONBONDED
+# NLRELE
+         1
+#  APPAK    RCRF   EPSRF
+         0       1.4      61.0     1
+# NSHAPE  ASHAPE  NA2CLC   TOLA2   EPSLS
+         3       1.4         2     1e-10         0
+#    NKX     NKY     NKZ   KCUT
+        10        10        10       100
+#    NGX     NGY     NGZ  NASORD  NFDORD  NALIAS  NSPORD
+        32        32        32         3         2         3         4
+# NQEVAL  FACCUR  NRDGRD  NWRGRD
+    100000       1.6         0         0
+#  NLRLJ  SLVDNS
+         0      33.3
+END
+PRINTOUT
+#NTPR: print out energies, etc. every NTPR steps
+#NTPP: =1 perform dihedral angle transition monitoring
+#     NTPR      NTPP
+       500         0
+END
+WRITETRAJ
+# NTPW = 0 : binary
+# NTPW = 1 : formatted
+# NTWSE = configuration selection parameter
+# =0: write normal trajectory
+# >0: chose min energy for writing configurations
+#    NTWX     NTWSE      NTWV      NTWF      NTWE      NTWG      NTWB
+     -500         0         0         0       500       500         0
+END
+PERTURBATION
+#    NTG: 0..1 controls use of free-energy calculation.
+#         0: no free-energy calculation (default)
+#         1: calculate dH/dRLAM
+#  NRDGL: 0,1 controls reading of initial value for RLAM.
+#         0: use initial RLAM parameter from PERTURBATION block
+#         1: read from configuration
+#   RLAM: 0.0..1.0 initial value for lambda
+#  DLAMT: >= 0.0 rate of lambda increase in time.
+# ALPHLJ: >= 0.0 Lennard-Jones soft-core parameter
+#  ALPHC: >= 0.0 Coulomb-RF soft-core parameter
+#   NLAM: > 0 power dependence of lambda coupling
+# NSCALE: 0..2 controls use of interaction scaling
+#         0: no interaction scaling
+#         1: interaction scaling
+#         2: perturbation for all atom pairs with scaled
+#            interactions. No perturbation for others.
+#
+#     NTG   NRDGL    RLAM   DLAMT
+        1       0     0.0     0.0
+#  ALPHLJ   ALPHC    NLAM  NSCALE
+      0.5     0.5       1       0
+END
